@@ -57,14 +57,14 @@ namespace project
     {
         // 학수번호
         virtual
-            const std::string&  key()  const  abstract;
+        const std::string&  key()  const  abstract;
 
         // 강의시간 목록
         virtual 
         std::vector<ILecTime>&  times() const abstract;
 
         // 학점
-        virtual int point() const  abstract;
+        virtual int point() const abstract;
 
     };
 

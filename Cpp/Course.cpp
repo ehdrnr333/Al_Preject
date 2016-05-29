@@ -2,7 +2,6 @@
 
 using namespace project;
 
-
 std::ostream& project::operator<< (std::ostream& _out,
 	const Day& _d)
 	noexcept(false)
@@ -40,7 +39,6 @@ bool project::do_collide(const ILecTime& _lhs,
 		&& (_lhs.start() <= _rhs.start())
 		&& (_rhs.start() < _lhs.end());
 }
-
 
 
 std::ostream& project::operator << (std::ostream& _out,
