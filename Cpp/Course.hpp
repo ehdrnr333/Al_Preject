@@ -11,18 +11,14 @@ namespace project
         Mon, Tue, Wed, Thu, Fri, Sat
     };
 
-    std::array<std::string, 7> DayString = {
+    static std::array<const std::string, 7> DayString = {
         "Sun",
         "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
     };
 
-    std::ostream& operator<< (std::ostream& _out, 
-                              const Day& _d) 
-        noexcept(false)
-    {
-        return _out << DayString.at((int)_d) << std::flush;
-    }
-
+	std::ostream& operator<< (std::ostream& _out,
+		const Day& _d)
+		noexcept(false);
     // 하나의 강의 시간을 나타내는 클래스
     // Lecture Time Interface
     struct ILecTime
@@ -43,36 +39,16 @@ namespace project
         virtual int length() const abstract;
     };
 
-    bool operator ==(const ILecTime& _lhs, 
-                     const ILecTime& _rhs)
-        noexcept
-    {
-        return _lhs.day() == _rhs.day()
-            && _lhs.start() == _rhs.start()
-            && _lhs.end() == _rhs.end();
-    }
+	bool operator ==(const ILecTime& _lhs,
+		const ILecTime& _rhs)
+		noexcept;
 
-    std::ostream& operator<<(std::ostream& _out, 
-                             const ILecTime& _lec) 
-        noexcept(false)
-    {
-        _out << " ILecTime : { "
-            << " day   : " << _lec.day()
-            << " start : " << _lec.start()
-            << " end   : " << _lec.end()
-            << " time  : " << _lec.length() << " } ";
-        return _out;
-    }
+	std::ostream& operator<<(std::ostream& _out,
+		const ILecTime& _lec)
+		noexcept(false);
 
-    bool do_collide(const ILecTime& _lhs,
-                    const ILecTime& _rhs)
-    {
-        // 1. 같은 날짜인가?
-        return (_lhs.day() == _rhs.day())
-            // 시작시간과 끝나는 시간을 사용한 비교.
-            && (_lhs.start() <= _rhs.start())
-            && (_rhs.start() < _lhs.end());
-    }
+	bool do_collide(const ILecTime& _lhs,
+		const ILecTime& _rhs) noexcept;
 
 
     // 강의 인터페이스
@@ -92,37 +68,17 @@ namespace project
 
     };
 
-    std::ostream& operator << (std::ostream& _out, 
-                               const ICourse& _crs) 
-        noexcept(false)
-    {
-        _out << " ICourse : { "
-            << " key   : " << _crs.key()
-            << " point : " << _crs.point();
-        for (auto& time : _crs.times()) {
-            _out << time;
-        }
-        _out << " } ";
-        return _out;
-    }
-
+	std::ostream& operator << (std::ostream& _out,
+		const ICourse& _crs)
+		noexcept(false);
 
     // Test codes
     namespace test
     {
-
-        // is ILectime printable?
-        void ILecTime_print(const ILecTime& _lec) 
-        {
-            std::cout << _lec << std::endl;;
-        }
-
-        // is ICourese printable?
-        void ICourse_print(const ICourse& _crs) 
-        {
-            std::cout << _crs;
-        }
-
+		template <class T>
+		void print_to_cout(const T& _object) {
+			std::cout << _object << std::endl;
+		}
     }   // namespace test
 
 } // namespace project
