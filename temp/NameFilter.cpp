@@ -69,7 +69,8 @@ void NameFilter::distribute_course_index(
 	for (auto p : set) {
 
 		auto count = p.second;
-		auto interval = TABLES_COUNT / count;
+		auto interval_weight = 0;
+		auto interval = TABLES_COUNT / count + start_index;
 		auto input_index = start_index;
 
 		while(count != 0){
