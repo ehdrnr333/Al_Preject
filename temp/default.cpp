@@ -1,14 +1,11 @@
-#include "./TestLecture.h"
+#include "../Cpp/Course.hpp"
 
 using namespace std;
 using namespace project;
 
+
 int main(int argc, char* argv[]) 
 {
 
-	TestLecture tl{};
-
-	test::print_to_cout(tl);
-
-	return std::system("pause");
+	system("pause");
 }

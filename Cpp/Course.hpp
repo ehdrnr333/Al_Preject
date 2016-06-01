@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <array>
 #include <vector>
+
 namespace project
 {
     // 날짜를 표현하는 클래스
@@ -65,6 +66,9 @@ namespace project
 
         // 학점
         virtual int point() const abstract;
+
+		// 가중치
+		virtual int priority() const abstract;
 
     };
 

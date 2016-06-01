@@ -46,8 +46,10 @@ std::ostream& project::operator << (std::ostream& _out,
 	noexcept(false)
 {
 	_out << " ICourse : { "
-		<< " key   : " << _crs.key()
-		<< " point : " << _crs.point();
+		<< " key		: " << _crs.key()
+		<< " point		: " << _crs.point()
+		<< " priority	: " << _crs.priority();
+
 	for (auto& time : _crs.times()) {
 		_out << time;
 	}

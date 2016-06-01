@@ -119,12 +119,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Cpp\Course.hpp" />
-    <ClInclude Include="TestLecture.h" />
+    <ClInclude Include="NameFilter.h" />
+    <ClInclude Include="TimeFilter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Cpp\Course.cpp" />
     <ClCompile Include="default.cpp" />
-    <ClCompile Include="TestLecture.cpp" />
+    <ClCompile Include="NameFilter.cpp" />
+    <ClCompile Include="TimeFilter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
