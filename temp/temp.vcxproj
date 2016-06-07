@@ -120,6 +120,7 @@
   <ItemGroup>
     <ClInclude Include="..\Cpp\Course.hpp" />
     <ClInclude Include="TestLecture.h" />
+    <ClInclude Include="Time_Graph.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Cpp\Course.cpp" />
