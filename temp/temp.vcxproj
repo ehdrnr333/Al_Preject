@@ -118,13 +118,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\Cpp\Course.hpp" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Course.h" />
     <ClInclude Include="NameFilter.h" />
     <ClInclude Include="TimeFilter.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Cpp\Course.cpp" />
-    <ClCompile Include="default.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="NameFilter.cpp" />
     <ClCompile Include="TimeFilter.cpp" />
   </ItemGroup>

@@ -1,8 +1,14 @@
 #include "NameFilter.h"	
+using namespace std;
 
-
-NameFilter::NameFilter(const vector<ICourse>& vec)
+NameFilter::NameFilter(const vector<Course>& vec)
 {
+	original_table = vec;
+
+	//TABLES_COUNT 만큼 Copy
+	for (int i = 0; i < TABLES_COUNT; ++i)
+		tables_copied.emplace_back(vec);
+
 	indexes_choosed.resize(TABLES_COUNT);
 
 	//시간표 정보 삽입(first : index, second : priority)
@@ -10,19 +16,52 @@ NameFilter::NameFilter(const vector<ICourse>& vec)
 		course_sets[vec[i].key()].push_back(
 			pair<int, int>(i, vec[i].priority()));
 	
-	//Priority 20으로 정규화
-	for (auto set : course_sets) {
+	//Priority를 TABLES_COUNT만큼 정규화
+	for (auto& set : course_sets) {
 		sort_courses(set.second);
+		priority_normalization(set.second);
 		distribute_course_index(set.second);
 	}
-
-	//TABLES_COUNT 만큼 Copy
-	for (int i = 0; i < TABLES_COUNT; ++i)
-		tables_copied.emplace_back(vec);
+	
 }
 
-vector<vector<ICourse>>& NameFilter::get_result()
+vector<vector<Course>>& NameFilter::get_result()
 {
+
+	//인덱스 출력용
+	for (auto a : indexes_choosed) {
+		for (auto b : a){
+			cout << b << " ";
+		}
+		cout << endl;
+	}
+	
+	
+	//중복성 제거
+	for (int i = 0; i < indexes_choosed.size(); ++i) {
+
+		for (auto iter = indexes_choosed.begin() + i + 1; 
+					iter != indexes_choosed.end(); ++iter ) {
+			if (indexes_choosed[i] == (*iter)) {
+				indexes_choosed.erase(iter);
+				iter = indexes_choosed.begin();
+				advance(iter, i + 1);
+			}
+		}
+
+	}
+
+	tables_filtered.resize(indexes_choosed.size());
+
+	for (int i = 0; i < indexes_choosed.size(); ++i) {
+
+		for (auto a : indexes_choosed[i]) {
+			auto&& current_crs = original_table[a];
+			tables_filtered[i].emplace_back(current_crs);
+		}
+
+	}
+
 	return tables_filtered;
 }
 
@@ -30,11 +69,11 @@ vector<vector<ICourse>>& NameFilter::get_result()
 void NameFilter::sort_courses(
 	vector<pair<int, int>>& set)
 {
-	int j;
+	auto j = 0;
 
 	for (int i = 1; i < set.size(); i++) {
 		auto in = set[i];
-		for (int j = i - 1; (j >= 0) && 
+		for (j = i - 1; (j >= 0) && 
 			(in.second >= set[j].second); j--) {
 			set[j + 1] = set[j];
 		}
@@ -47,14 +86,31 @@ void NameFilter::priority_normalization(
 	vector<pair<int, int>>& set)
 {
 	int total = 0;
+	int check = 0;
 
-	for (auto p : set) 
-		total =+ p.second;
+	for (auto& p : set) 
+		total += p.second;
 
-	for (auto r : set) 
+	for (auto& r : set) {
 		r.second = round(static_cast<double>
 			(TABLES_COUNT) * (static_cast<double>
-				(r.second) / total)) ;
+				(r.second) / total));
+
+		check += r.second;
+	}
+
+	//정규화 과정에서 딱 떨어지게 분배가 되지 않았을 경우
+	while (check != TABLES_COUNT) {
+
+		if (check < TABLES_COUNT) {
+			++set[0].second;
+			++check;
+		}
+		else {
+			--set[0].second;
+			--check;
+		}
+	}
 	
 }
 
@@ -69,8 +125,8 @@ void NameFilter::distribute_course_index(
 	for (auto p : set) {
 
 		auto count = p.second;
-		auto interval_weight = 0;
-		auto interval = TABLES_COUNT / count + start_index;
+		auto interval = TABLES_COUNT / 
+						count + pow(count, start_index);
 		auto input_index = start_index;
 
 		while(count != 0){
@@ -98,7 +154,6 @@ void NameFilter::distribute_course_index(
 				--count;
 			}
 		}
-
 	}
 
 	++start_index;
