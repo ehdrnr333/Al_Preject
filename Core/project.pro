@@ -5,15 +5,14 @@ CONFIG -= qt
 
 HEADERS += \
     Model/Course.h \
-    Model/CourseInterpreter.h \
     Model/CrsTable.hpp \
     Model/Day.h \
     Model/LecTime.h \
-    Base.h
+    Base.h \
+    Model/Interpreter.hpp
 
 SOURCES += \
     Model/Course.cpp \
-    Model/CourseInterpreter.cpp \
     Model/Day.cpp \
     Model/LecTime.cpp \
     Base.cpp \

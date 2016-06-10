@@ -1,25 +1,24 @@
-//---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+// ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== 
+//  Author 	 : Jun Su. Lim
+//  File     : RBTree.h
+//  Updated  : 16. 06. 04
+//  Note
+//  	red-black tree
+//		rb_tree_iter_inorder와 rb_tree_destroy만 사용 요망
+//      rb_tree_head->right가 red-black tree에 root
+// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 
-//Code Author : Jun Su. Lim
-//Student Num : 
-//Header      : course_rb
-//Created     : 16. 06. 02 
-//Modified    : 16. 06. 04
-//Description : course 정보를 red-black tree에 저장.
-//            : rb_tree_iter_inorder와 rb_tree_destroy만 사용 요망.
-//            : rb_tree_head->right가 red-black tree에 root.
+#ifndef __RB_TREE_H__
+#define __RB_TREE_H__
 
-//---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-
-#ifndef __COURSE_RB_H__
-#define __COURSE_RB_H__
-#include<malloc.h>
-#include<stdio.h>
+#include <malloc.h>
+#include <stdio.h>
 #define infoNIL 0
 #define itemMIN -1
 #define black 0
 #define red 1
 #define MAX_STACK_SIZE 1000
+
 typedef int itemType;
 typedef int infoType;
 

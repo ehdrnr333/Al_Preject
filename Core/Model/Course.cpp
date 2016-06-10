@@ -56,7 +56,7 @@ std::ostream&
     _out << "{ "
         << "\"code\" : \"" << _crs.code() << "\", "
         << "\"id\" : \"" << _crs.id() << "\", "
-        << "\"lectures\" : [";
+        << "\"lec\" : [";
 
     for(const auto& lec : _crs.lectures()){
         _out << lec;
