@@ -14,9 +14,6 @@
     <ClCompile Include="Model\Course.cpp">
       <Filter>Model</Filter>
     </ClCompile>
-    <ClCompile Include="Model\CourseInterpreter.cpp">
-      <Filter>Model</Filter>
-    </ClCompile>
     <ClCompile Include="Model\Day.cpp">
       <Filter>Model</Filter>
     </ClCompile>
@@ -28,9 +25,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Course.h">
-      <Filter>Model</Filter>
-    </ClInclude>
-    <ClInclude Include="Model\CourseInterpreter.h">
       <Filter>Model</Filter>
     </ClInclude>
     <ClInclude Include="Model\CrsTable.hpp">
@@ -46,6 +40,9 @@
       <Filter>Model</Filter>
     </ClInclude>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Model\Interpreter.hpp">
+      <Filter>Model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
