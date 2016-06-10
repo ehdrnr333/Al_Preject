@@ -1,5 +1,5 @@
 ﻿
-#include "./Model/CourseInterpreter.h"
+#include "./Model/Interpreter.hpp"
 #include "./Model/CrsTable.hpp"
 
 using namespace std;
@@ -8,51 +8,54 @@ using namespace project;
 
 // - Note :
 //      Parsing the exace colum...
-int main(int argc, char *argv[])
+int io_test(const string _ipath,
+            const string _opath)
 {
-    std::string in_path = argv[1];
-    std::ifstream fin{in_path,
+    // Open the file
+    std::ifstream fin{_ipath,
                       ios_base::in};
 
-
-    // Skip the first line
+    // Skip the first line (CSV headings)
     fin >> skip_line;
 
-    CourseInterpreter IL{fin};
-    CrsTable<Course>  large_table;
 
-    try{    // Interpreter's I/O exception
 
-        // Until the stream is good, keep going
-        // while(true){
-        while(fin){
-            try{
-                // Generate the course and append it to table
-                auto crs = IL.generate();
-                large_table.append(crs);
-            }
-            // If generate() throws,
-            // ignore and go back to loop
-            catch(std::invalid_argument& invalid){
-                std::cerr << invalid.what() << std::endl;
-            }
+    Interpreter<Course> IL{fin};
+    CrsTable<Course>    Table;
+
+
+    // Until the stream is good, keep going
+    while(fin){
+        try{
+            // Generate the course and append it to table
+            auto crs = IL.generate();
+            Table.append(crs);
         }
-
+        // If generate() throws,
+        // ignore and go back to loop
+        catch(std::invalid_argument& invalid){
+            std::cerr << invalid.what() << std::endl;
+        }
     }
-    // I/O Failure. The Input file stream is done.
-    catch(std::ios_base::failure& iofail){
-        std::cerr << iofail.code() << " : " << iofail.what() << std::endl;
-    }
 
 
-    std::string out_path{ argv[2] };
-    
-    std::ofstream fout{out_path,
+    std::ofstream fout{_opath,
                        ios_base::out | ios_base::trunc};
 
-    fout << large_table << std::endl;
+    fout << Table << std::endl;
 
-    std::cout << large_table.size() << std::endl;
+    // Print the table size
+    std::cout << Table.size() << std::endl;
 
-    return 0;
+    return EXIT_SUCCESS;
+}
+
+
+int main(int argc, char* argv[]){
+    try{
+        return io_test(argv[1], argv[2]);
+    }
+    catch(...){
+        return EXIT_FAILURE;
+    }
 }

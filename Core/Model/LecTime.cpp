@@ -68,9 +68,9 @@ std::ostream&
     noexcept(false)
 {
     _out << "{ "
-        << "\"weekday\" : \"" << _lec.day() << "\", "
-        << "\"start_tm\" : \"" << _lec.start() << "\", "
-        << "\"end_tm\" : \"" << _lec.end() << "\" } ";
+        << "\"day\" : \"" << _lec.day() << "\", "
+        << "\"start\" : \"" << _lec.start() << "\", "
+        << "\"end\" : \"" << _lec.end() << "\" } ";
     return _out;
 }
 
