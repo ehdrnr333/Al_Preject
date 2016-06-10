@@ -11,7 +11,6 @@ using namespace project;
 int main(int argc, char *argv[])
 {
     std::string in_path = argv[1];
-    //std::string path = "./TestCase.txt";
     std::ifstream fin{in_path,
                       ios_base::in};
 
@@ -47,6 +46,7 @@ int main(int argc, char *argv[])
 
 
     std::string out_path{ argv[2] };
+    
     std::ofstream fout{out_path,
                        ios_base::out | ios_base::trunc};
 

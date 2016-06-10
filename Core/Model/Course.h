@@ -21,7 +21,6 @@
 namespace project
 {
 
-
 // - Note
 //      Basic Course class
 //
@@ -65,7 +64,8 @@ public: // ---- ---- Default ---- ----
 
     // - Note :
     //      Return the vector of lecture times
-    virtual const std::vector<LecTime>& lectures() const noexcept;
+    virtual 
+    const std::vector<LecTime>& lectures() const noexcept;
 
 };
 

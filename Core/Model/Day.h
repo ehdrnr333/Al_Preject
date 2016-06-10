@@ -31,8 +31,8 @@ namespace project
 
     static std::array<const string, week_len> EngWeek =
     {
-        "Sun",  "Mon",  "Tue",  "Wed",
-        "Thu",  "Fri",  "Sat"
+        u8"Sun",  u8"Mon",  u8"Tue",  u8"Wed",
+        u8"Thu",  u8"Fri",  u8"Sat"
     };
 
     static std::array<const string, week_len> KorWeek =

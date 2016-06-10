@@ -69,7 +69,7 @@ auto CourseInterpreter::get_time_info(string& _str)
         // with Korean character
         if(std::memcmp(_str.c_str(),
                        KorWeek[idx].c_str(),
-                       3) == 0)
+                       3 == 0))
         {
             day = static_cast<WeekDay>(idx);
             break;
