@@ -8,12 +8,12 @@ using namespace project;
 
 // - Note :
 //      Parsing the exace colum...
-int io_test(const string _ipath,
-            const string _opath)
+int io_test(const std::string _ipath,
+            const std::string _opath)
 {
     // Open the file
     std::ifstream fin{_ipath,
-                      ios_base::in};
+					  std::ios_base::in};
 
     // Skip the first line (CSV headings)
     fin >> skip_line;
@@ -53,7 +53,7 @@ int io_test(const string _ipath,
 
 int main(int argc, char* argv[]){
     try{
-        return io_test(argv[1], argv[2]);
+        return io_test("TestCase_euckr.txt", "TestResult.txt");
     }
     catch(...){
         return EXIT_FAILURE;

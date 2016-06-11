@@ -113,16 +113,15 @@
     <ClCompile Include="Base.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model\Course.cpp" />
-    <ClCompile Include="Model\CourseInterpreter.cpp" />
     <ClCompile Include="Model\Day.cpp" />
     <ClCompile Include="Model\LecTime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
     <ClInclude Include="Model\Course.h" />
-    <ClInclude Include="Model\CourseInterpreter.h" />
     <ClInclude Include="Model\CrsTable.hpp" />
     <ClInclude Include="Model\Day.h" />
+    <ClInclude Include="Model\Interpreter.hpp" />
     <ClInclude Include="Model\LecTime.h" />
     <ClInclude Include="Model\RBTree.h" />
   </ItemGroup>

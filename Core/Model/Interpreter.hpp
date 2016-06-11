@@ -136,7 +136,7 @@ namespace project
             // with Korean character
             if(std::memcmp(_str.c_str(),
                            KorWeek[idx].c_str(),
-                           3) == 0)
+                           2) == 0)
             {
                 day = static_cast<project::WeekDay>(idx);
                 break;
@@ -164,12 +164,15 @@ namespace project
         // Now we changed "10.0" to "100 "
         // Then convert the string to decimal integer
         int start = 0;
-        if(std::isdigit(_str[pos-2])){
-            start = std::atoi(&_str[pos-2]);
-        }
-        else{
-            start = std::atoi(&_str[pos-1]);
-        }
+
+		// !!! 아스키 문제를 해결하기 위한 임시 코드 !!!
+		auto ch = _str[pos - 2];
+		if (ch < 0x00 || ch > 0x7F) {
+			start = std::atoi(&_str[pos - 1]);
+		}
+		else {
+			start = std::atoi(&_str[pos - 2]);
+		}
 
 
         // 2 : Acquire *End* time info
