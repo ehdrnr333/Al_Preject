@@ -23,19 +23,19 @@ namespace project
         Thu = 4,  Fri = 5,  Sat = 6
     };
 
-    static constexpr auto week_len = 7;
+    static constexpr auto week = 7;
 
     std::ostream& operator<< (std::ostream& _out,
                               const WeekDay _day)
         noexcept(false);
 
-    static std::array<const string, week_len> EngWeek =
+    static Ary<const string, week> EngWeek =
     {
         "Sun",  "Mon",  "Tue",  "Wed",
         "Thu",  "Fri",  "Sat"
     };
 
-    static std::array<const string, week_len> KorWeek =
+    static Ary<const string, week> KorWeek =
     {
         "일", "월", "화", "수",
         "목", "금", "토"

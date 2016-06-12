@@ -2,21 +2,6 @@
 
 using namespace project;
 
-
-LecTime::LecTime(std::tuple<WeekDay,int,int>&& tup) noexcept:
-    weekday(std::get<0>(tup)),
-    start_tm(std::get<1>(tup)),
-    end_tm(std::get<2>(tup))
-{
-    if(end_tm <= start_tm){
-        throw std::invalid_argument{
-            "LecTime : invalid time argument "
-        };
-    }
-}
-
-
-
 LecTime::LecTime(WeekDay _wday,
                  int _s, int _e) noexcept(false):
     weekday(_wday),
