@@ -37,8 +37,8 @@ namespace project
 
     static Ary<const string, week> KorWeek =
     {
-        "일", "월", "화", "수",
-        "목", "금", "토"
+        u8"일", u8"월", u8"화", u8"수",
+        u8"목", u8"금", u8"토"
     };
 
 }

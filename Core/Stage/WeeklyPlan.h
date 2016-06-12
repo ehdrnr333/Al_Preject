@@ -11,15 +11,17 @@ namespace project
               class Clock>
     struct DateTime 
     {
-        using date_type = Date;
-        using clock_type = Clock;
-
         Date  date;
         Clock clock;
 
         DateTime(Date _d, Clock _c) :
             date(_d), clock(_c)
         {}
+
+        DateTime(const DateTime&) = default;
+        DateTime(DateTime&&)      = default;
+        DateTime& operator = (const DateTime&) = default;
+        DateTime& operator = (DateTime&&)      = default;
     };
 
     template<class D, class C>
@@ -38,11 +40,9 @@ namespace project
                          const DateTime<D, C>& _rhs)
         noexcept
     {
-        if (_lhs.date < _rhs.date) {    return true;    }
-        if (_lhs.clock < _rhs.clock)   
-            {   return true;  }
-        else 
-            {   return false; }
+        return (_lhs.date < _rhs.date)
+                || ((_lhs.date == _rhs.date)
+                     && (_lhs.clock < _rhs.clock));
     }
     
     template<class D, class C>
@@ -56,17 +56,29 @@ namespace project
 
     // Task Time
     // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-    template<class Date,
-             class Clock, class Duration>
+    template<class DateTime, class Duration>
     class TaskTime 
     {
-        DateTime<Date, Clock> st;
+        DateTime st;
         Duration len;
 
     public:
         TaskTime(DateTime _start, Duration _dur):
             st(_start), len(_dur)
         {}
+        template <class Date, class Clock>
+        TaskTime(Date _d, Clock _c, Duration _dur) :
+            st(_d, _c), len(_dur)
+        {}
+
+        TaskTime(const TaskTime&) = default;
+        TaskTime(TaskTime&&)      = default;
+        TaskTime& operator = (const TaskTime&) = default;
+        TaskTime& operator = (TaskTime&&)      = default;
+
+        auto date() const noexcept {
+            return st.date;
+        }
 
         DateTime start() const noexcept {
             return st;
@@ -84,16 +96,46 @@ namespace project
     };
 
 
+    template<class DTime, class Dur>
+    constexpr
+        bool operator <(const TaskTime<DTime, Dur>& _lhs,
+                        const TaskTime<DTime, Dur>& _rhs)
+        noexcept
+    {
+        return (_lhs.start() < _rhs.start());
+    }
+
+
+    template<class DTime, class Dur>
+    constexpr
+        bool operator ==(const TaskTime<DTime, Dur>& _lhs,
+                         const TaskTime<DTime, Dur>& _rhs)
+        noexcept
+    {
+        return (_lhs.start() == _rhs.start()) 
+                && (_lhs.length() == _rhs.length());
+    }
+
+    template<class DTime, class Dur>
+    constexpr
+        bool operator <=(const TaskTime<DTime, Dur>& _lhs,
+                         const TaskTime<DTime, Dur>& _rhs)
+        noexcept
+    {
+        return (_lhs < _rhs) || (_lhs == _rhs);
+    }
+
+
+
     // Task Time Collision Check
     // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-    template<class Date, class C, class Dur>
-    constexpr 
-        bool Collide(const TaskTime<Date, C, Dur>& _lhs,
-                     const TaskTime<Date, C, Dur>& _rhs) 
+    template<class DateTime, class Dur>
+    bool Collide(const TaskTime<DateTime, Dur>& _lhs,
+                 const TaskTime<DateTime, Dur>& _rhs)
         noexcept
     {
         // Different day?
-        if (_lhs.st.date() != _rhs.st.date())
+        if (_lhs.date() != _rhs.date())
             {   return false;   }
         // |L| <= |R|
         if (_lhs.end() <= _rhs.start())
@@ -112,19 +154,35 @@ namespace project
     template <class ID, class Job, class Time>
     class Plan
     {
-        static_assert(std::is_copy_assignable<Time>::type == false, "class Plan");
-        static_assert(std::is_copy_constructible<Time>::type == false, "class Plan");
-
+        ID  p_id;
+        Job p_job;
     public:
-        const ID   id;
-        const Job  job;
         std::vector<Time> times;
 
 
         Plan(const ID& _id, const Job& _job, 
              const Time _tm) :
-            id(_id), job(_job)
+            p_id(_id), p_job(_job)
         {
+            times.emplace_back(_tm);
+        }
+
+        Plan(const Plan& _p) = default;
+        Plan(Plan&& _p) = default;
+
+        Plan& operator =(const Plan& _p) = default;
+        Plan& operator =(Plan&& _p) noexcept = default;
+
+
+        const ID&   id() const noexcept {
+            return p_id;
+        }
+        const Job&  job() const noexcept {
+            return p_job;
+        }
+
+
+        auto add(Time _tm) noexcept(false){
             times.emplace_back(_tm);
         }
 
@@ -154,13 +212,22 @@ namespace project
         }
     };
 
+    template <class I, class J, class T>
+    constexpr 
+        bool operator ==(const Plan<I, J, T>& _lhs,
+            const Plan<I, J, T>& _rhs) noexcept
+    {
+        return (_lhs.id() == _rhs.id())
+            && (_lhs.job() == _rhs.job())
+            && (_lhs.times == _rhs.times);
+    }
+
 
     // Plan Collision Check
     // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
     template <class I, class J, class T>
-    constexpr
-        bool Collide(const Plan<I, J, T>& _lhs, 
-                     const Plan<I, J, T>& _rhs) noexcept
+    bool Collide(const Plan<I, J, T>& _lhs, 
+                 const Plan<I, J, T>& _rhs) noexcept
     {
         for (const auto& ltm : _lhs) {
             for (const auto& rtm : _rhs) {
@@ -176,3 +243,4 @@ namespace project
 }
 
 #endif
+

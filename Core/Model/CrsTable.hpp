@@ -41,7 +41,7 @@ namespace project
         {
             size_t total{0};
             for (const auto& crs : crs_list) {
-                total += crs;
+                total += crs.point;
             }
             return total;
         }
