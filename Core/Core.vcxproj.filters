@@ -9,12 +9,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{2dfc5ee3-6760-4e1d-ba07-028067a71a27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Course.cpp">
-      <Filter>Model</Filter>
-    </ClCompile>
-    <ClCompile Include="Model\CourseInterpreter.cpp">
       <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="Model\Day.cpp">
@@ -25,12 +25,12 @@
     </ClCompile>
     <ClCompile Include="Base.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Test\io_test.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Course.h">
-      <Filter>Model</Filter>
-    </ClInclude>
-    <ClInclude Include="Model\CourseInterpreter.h">
       <Filter>Model</Filter>
     </ClInclude>
     <ClInclude Include="Model\CrsTable.hpp">
@@ -46,6 +46,9 @@
       <Filter>Model</Filter>
     </ClInclude>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Model\Interpreter.hpp">
+      <Filter>Model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">

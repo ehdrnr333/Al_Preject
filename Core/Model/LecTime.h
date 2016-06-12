@@ -34,9 +34,6 @@ namespace project
         int      end_tm;
 
     public:
-
-        explicit LecTime(std::tuple<WeekDay,int,int>&& tup) noexcept;
-
         explicit LecTime(WeekDay _wday,
                          int _s, int _e) noexcept(false);
 

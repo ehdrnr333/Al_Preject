@@ -30,7 +30,7 @@ class CrsTable
     // Summation of courses' point
     size_t pt_sum{};
     // Course list
-    std::deque<Course> crs_list{};
+    Deq<Course> crs_list{};
 public:
     explicit CrsTable() = default;
 
