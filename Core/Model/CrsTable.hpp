@@ -19,67 +19,68 @@
 namespace project
 {
 
-// - Note :
-//      Table of `Course`.
-//      the template class can support various Course types.
-// - Example
-//      CrsTable<NamedCourse> tbl;
-template <class Course>
-class CrsTable
-{
-    // Summation of courses' point
-    size_t pt_sum{};
-    // Course list
-    Deq<Course> crs_list{};
-public:
-    explicit CrsTable() = default;
-
-    void append(const Course& crs) noexcept(false)
+    // - Note :
+    //      Table of `Course`.
+    //      the template class can support various Course types.
+    // - Example
+    //      CrsTable<NamedCourse> tbl;
+    template <class Course>
+    class CrsTable
     {
-        pt_sum += crs.point();
-        crs_list.push_back(crs);
-    }
+        // Course list
+        Deq<Course> crs_list{};
+    public:
+        explicit CrsTable() = default;
 
-    size_t total_point() const noexcept
+        void append(const Course& crs) noexcept(false)
+        {
+            crs_list.emplace_back(crs);
+        }
+
+        size_t total_point() const noexcept
+        {
+            size_t total{0};
+            for (const auto& crs : crs_list) {
+                total += crs;
+            }
+            return total;
+        }
+
+        size_t size() const noexcept {
+            return crs_list.size();
+        }
+
+        auto begin() noexcept {
+            return crs_list.begin();
+        }
+
+        const auto begin() const noexcept {
+            return crs_list.begin();
+        }
+
+        auto end() noexcept {
+            return crs_list.end();
+        }
+
+        const auto end() const noexcept {
+            return crs_list.end();
+        }
+
+    };
+
+    template <class Course>
+    std::ostream& operator <<(std::ostream& out,
+                              const CrsTable<Course>& _tbl) noexcept(false)
     {
-        return pt_sum;
+        out << "{ "
+            << "\"total_point\" : \"" << _tbl.total_point() << "\", "
+            << "\"courses : \"[ \n";
+        for(const auto& crs : _tbl){
+            out << crs << '\n';
+        }
+        out << " ] } ";
+        return out;
     }
-
-    size_t size() const noexcept {
-        return crs_list.size();
-    }
-
-    auto begin() noexcept {
-        return crs_list.begin();
-    }
-
-    const auto begin() const noexcept {
-        return crs_list.begin();
-    }
-
-    auto end() noexcept {
-        return crs_list.end();
-    }
-
-    const auto end() const noexcept {
-        return crs_list.end();
-    }
-
-};
-
-template <class Course>
-std::ostream& operator <<(std::ostream& out,
-                          const CrsTable<Course>& _tbl) noexcept(false)
-{
-    out << "{ "
-        << "\"total_point\" : \"" << _tbl.total_point() << "\", "
-        << "\"courses : \"[ \n";
-    for(const auto& crs : _tbl){
-        out << crs << '\n';
-    }
-    out << " ] } ";
-    return out;
-}
 
 
 }   // namespace project

@@ -59,20 +59,29 @@ namespace project
 
     // - Note
     //      Short notation for unique_ptr
-    template <typename T>    using uptr = std::unique_ptr<T>;
+    template <typename T>    
+    using uptr = std::unique_ptr<T>;
 
     // - Note
     //      Short notation for shared_ptr
-    template <typename T>    using sptr = std::shared_ptr<T>;
+    template <typename T>    
+    using sptr = std::shared_ptr<T>;
 
 
     template <typename T, size_t sz>
     using Ary = std::array<T, sz>;
 
-    template <typename T>    using Vec = std::vector<T>;
-    template <typename T>    using Deq = std::deque<T>;
-    template <typename T>    using Que = std::deque<T>;
-    template <typename T>    using List = std::list<T>;
+    template <typename T>    
+    using Vec = std::vector<T>;
+
+    template <typename T>    
+    using Deq = std::deque<T>;
+
+    template <typename T>    
+    using Que = std::deque<T>;
+
+    template <typename T>    
+    using List = std::list<T>;
 
     template <typename K, class V>
     using Map = std::map<K, V>;

@@ -131,7 +131,7 @@ namespace project
 
         project::WeekDay day = project::WeekDay::Invalid;
 
-        for(int idx = 0; idx < week_len; ++idx){
+        for(int idx = 0; idx < week; ++idx){
             // Compare string's first 3 byte character
             // with Korean character
             if(std::memcmp(_str.c_str(),
@@ -263,8 +263,6 @@ namespace project
         auto id   = std::get<1>(pkey);
 
 
-
-
         // Make Course object
         // ---- ---- ---- ---- ---- ----
 
@@ -275,8 +273,13 @@ namespace project
             for(auto& tm : times){
                 // Parse time information
                 auto&& info = get_time_info(tm);
+
+                auto&& d = std::get<0>(info);
+                auto&& s = std::get<1>(info);
+                auto&& e = std::get<2>(info);
+
                 // Make lecture time object
-                LecTime lec{std::move(info)};
+                LecTime lec(d, s, e);
 
                 // insert the object
                 crs.addTime(lec);

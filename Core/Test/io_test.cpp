@@ -49,4 +49,3 @@ int io_test(const std::string _ipath,
 
     return EXIT_SUCCESS;
 }
-
