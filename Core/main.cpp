@@ -1,6 +1,7 @@
 ﻿
 #include "./Model/Interpreter.hpp"
 #include "./Model/CrsTable.hpp"
+#include "./Model/RBTree.h"
 
 using namespace std;
 using namespace project;
@@ -37,7 +38,17 @@ int io_test(const std::string _ipath,
             std::cerr << invalid.what() << std::endl;
         }
     }
+	rb_tree_init();
+	//CrsTable<Course> Table;
+	for (auto iter = Table.begin(); iter != Table.end(); iter++)
+	{
+		auto& item = *iter;
+		//중복 체크
+		rb_tree_insert(&item);
+		
+	}
 
+	rb_tree_iter_inorder();
 
     std::ofstream fout{_opath,
                        ios_base::out | ios_base::trunc};

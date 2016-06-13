@@ -1,2 +1,943 @@
-{ "total_point" : "0", "courses : "[ 
+{ "total_point" : "2371", "courses : "[ 
+{ "code" : "CSE2014", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "50", "end" : "65" } { "day" : "Wed", "start" : "50", "end" : "65" } ], "point" : "3" } 
+{ "code" : "CSE2014", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } { "day" : "Wed", "start" : "90", "end" : "105" } ], "point" : "3" } 
+{ "code" : "CSE2014", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "50", "end" : "65" } { "day" : "Wed", "start" : "50", "end" : "65" } ], "point" : "3" } 
+{ "code" : "CSE2016", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } { "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "3" } 
+{ "code" : "CSE2017", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "95" } { "day" : "Thu", "start" : "20", "end" : "35" } ], "point" : "3" } 
+{ "code" : "CSE2017", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "20", "end" : "35" } { "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "3" } 
+{ "code" : "CSE2017", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "95" } { "day" : "Thu", "start" : "20", "end" : "35" } ], "point" : "3" } 
+{ "code" : "CSE2018", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "20", "end" : "35" } { "day" : "Wed", "start" : "70", "end" : "85" } ], "point" : "3" } 
+{ "code" : "CSE2018", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "20", "end" : "35" } { "day" : "Fri", "start" : "20", "end" : "35" } ], "point" : "3" } 
+{ "code" : "CSE2018", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } { "day" : "Fri", "start" : "50", "end" : "65" } ], "point" : "3" } 
+{ "code" : "CSE2019", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } { "day" : "Wed", "start" : "70", "end" : "85" } ], "point" : "3" } 
+{ "code" : "CSE2019", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "85" } { "day" : "Thu", "start" : "20", "end" : "35" } ], "point" : "3" } 
+{ "code" : "CSE2019", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } { "day" : "Thu", "start" : "70", "end" : "85" } ], "point" : "3" } 
+{ "code" : "CSE2022", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "20", "end" : "35" } { "day" : "Wed", "start" : "20", "end" : "35" } ], "point" : "3" } 
+{ "code" : "CSE2022", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "90", "end" : "105" } { "day" : "Thu", "start" : "90", "end" : "105" } ], "point" : "3" } 
+{ "code" : "DES2001", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "90", "end" : "115" } ], "point" : "3" } 
+{ "code" : "DES2001", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "90", "end" : "115" } ], "point" : "3" } 
+{ "code" : "DES2001", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "90", "end" : "115" } ], "point" : "3" } 
+{ "code" : "CSE4029", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "85" } { "day" : "Thu", "start" : "70", "end" : "85" } ], "point" : "3" } 
+{ "code" : "CSE4029", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "30", "end" : "45" } { "day" : "Wed", "start" : "70", "end" : "85" } ], "point" : "3" } 
+{ "code" : "CSE4031", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Tue", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "CSE4031", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Thu", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "CSE4032", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "90", "end" : "100" } { "day" : "Thu", "start" : "70", "end" : "80" } ], "point" : "3" } 
+{ "code" : "CSE4032", "id" : "2", "lec" : [{ "day" : "Thu", "start" : "90", "end" : "100" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "CSE4033", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "55", "end" : "65" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "CSE4033", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "CSE4037", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "25", "end" : "35" } { "day" : "Thu", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "CSE4037", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "90", "end" : "100" } ], "point" : "3" } 
+{ "code" : "CSE4043", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "75", "end" : "85" } ], "point" : "3" } 
+{ "code" : "CSE4044", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "50" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "CSE4051", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "25", "end" : "40" } { "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "3" } 
+{ "code" : "CSE4053", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "CSE4060", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "85" } { "day" : "Fri", "start" : "20", "end" : "35" } ], "point" : "3" } 
+{ "code" : "CSE4061", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "60", "end" : "75" } { "day" : "Fri", "start" : "20", "end" : "35" } ], "point" : "3" } 
+{ "code" : "CSE4063", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } { "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "3" } 
+{ "code" : "CSE4066", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "90", "end" : "105" } { "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "3" } 
+{ "code" : "CSE4066", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "90", "end" : "105" } { "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "3" } 
+{ "code" : "CSE4066", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "90", "end" : "105" } { "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "3" } 
+{ "code" : "CSE4066", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "90", "end" : "105" } { "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "3" } 
+{ "code" : "CSE4067", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } { "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "3" } 
+{ "code" : "DES4006", "id" : "1", "lec" : [{ "day" : "Thu", "start" : "110", "end" : "135" } ], "point" : "3" } 
+{ "code" : "DES4012", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "DES4012", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC0003", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "9", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "10", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "11", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "12", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "13", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "14", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "15", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "16", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "17", "lec" : [{ "day" : "Wed", "start" : "20", "end" : "35" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "19", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "20", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "21", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "22", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "23", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "24", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "25", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "26", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "115" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "27", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "115" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "28", "lec" : [{ "day" : "Tue", "start" : "20", "end" : "35" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "29", "lec" : [{ "day" : "Thu", "start" : "20", "end" : "35" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "30", "lec" : [{ "day" : "Mon", "start" : "20", "end" : "35" } ], "point" : "2" } 
+{ "code" : "RGC0003", "id" : "31", "lec" : [{ "day" : "Thu", "start" : "20", "end" : "35" } ], "point" : "2" } 
+{ "code" : "RGC0017", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "15" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "20", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "15" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "20", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "7", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "80", "end" : "85" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "9", "lec" : [{ "day" : "Mon", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "10", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "11", "lec" : [{ "day" : "Mon", "start" : "80", "end" : "85" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "12", "lec" : [{ "day" : "Mon", "start" : "90", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "13", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "105" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "14", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "15" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "15", "lec" : [{ "day" : "Tue", "start" : "20", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "16", "lec" : [{ "day" : "Mon", "start" : "90", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "17", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "18", "lec" : [{ "day" : "Tue", "start" : "60", "end" : "65" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "19", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "20", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "21", "lec" : [{ "day" : "Tue", "start" : "60", "end" : "65" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "22", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "23", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "105" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "24", "lec" : [{ "day" : "Wed", "start" : "10", "end" : "15" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "25", "lec" : [{ "day" : "Wed", "start" : "20", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "26", "lec" : [{ "day" : "Wed", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "27", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "45" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "28", "lec" : [{ "day" : "Wed", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "29", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "45" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "30", "lec" : [{ "day" : "Wed", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "31", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "45" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "32", "lec" : [{ "day" : "Wed", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "33", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "105" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "34", "lec" : [{ "day" : "Wed", "start" : "110", "end" : "115" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "35", "lec" : [{ "day" : "Wed", "start" : "110", "end" : "115" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "36", "lec" : [{ "day" : "Thu", "start" : "10", "end" : "15" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "37", "lec" : [{ "day" : "Thu", "start" : "20", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "38", "lec" : [{ "day" : "Thu", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "39", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "40", "lec" : [{ "day" : "Thu", "start" : "60", "end" : "65" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "41", "lec" : [{ "day" : "Fri", "start" : "90", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "42", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "43", "lec" : [{ "day" : "Thu", "start" : "60", "end" : "65" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "44", "lec" : [{ "day" : "Thu", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "45", "lec" : [{ "day" : "Thu", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "46", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "105" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "47", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "15" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "48", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "15" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "49", "lec" : [{ "day" : "Fri", "start" : "20", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "50", "lec" : [{ "day" : "Fri", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "53", "lec" : [{ "day" : "Fri", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "54", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "85" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "55", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "85" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "56", "lec" : [{ "day" : "Fri", "start" : "90", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "57", "lec" : [{ "day" : "Thu", "start" : "20", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "58", "lec" : [{ "day" : "Thu", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "59", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "45" } ], "point" : "1" } 
+{ "code" : "RGC0017", "id" : "60", "lec" : [{ "day" : "Wed", "start" : "10", "end" : "15" } ], "point" : "1" } 
+{ "code" : "RGC0018", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "15" } ], "point" : "1" } 
+{ "code" : "RGC0018", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "20", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC0018", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC0018", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "60", "end" : "65" } ], "point" : "1" } 
+{ "code" : "RGC0018", "id" : "5", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC0018", "id" : "6", "lec" : [{ "day" : "Thu", "start" : "60", "end" : "65" } ], "point" : "1" } 
+{ "code" : "RGC0018", "id" : "7", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "15" } ], "point" : "1" } 
+{ "code" : "RGC0018", "id" : "8", "lec" : [{ "day" : "Fri", "start" : "20", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC0018", "id" : "9", "lec" : [{ "day" : "Wed", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC0012", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC0012", "id" : "2", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC0012", "id" : "3", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC0012", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC0012", "id" : "5", "lec" : [{ "day" : "Fri", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "RGC1001", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "90", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "90", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "7", "lec" : [{ "day" : "Mon", "start" : "90", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "90", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "9", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "10", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "11", "lec" : [{ "day" : "Fri", "start" : "20", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "12", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "13", "lec" : [{ "day" : "Thu", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "14", "lec" : [{ "day" : "Fri", "start" : "20", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "15", "lec" : [{ "day" : "Thu", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "16", "lec" : [{ "day" : "Thu", "start" : "70", "end" : "75" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "17", "lec" : [{ "day" : "Fri", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "18", "lec" : [{ "day" : "Fri", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "19", "lec" : [{ "day" : "Fri", "start" : "30", "end" : "35" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "20", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "45" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "21", "lec" : [{ "day" : "Wed", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "22", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "45" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "23", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "45" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "24", "lec" : [{ "day" : "Wed", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "25", "lec" : [{ "day" : "Wed", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "26", "lec" : [{ "day" : "Wed", "start" : "50", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "27", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "45" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "28", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "15" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "29", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "105" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "30", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "105" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "31", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "105" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "32", "lec" : [{ "day" : "Mon", "start" : "110", "end" : "115" } ], "point" : "1" } 
+{ "code" : "RGC1001", "id" : "33", "lec" : [{ "day" : "Mon", "start" : "110", "end" : "115" } ], "point" : "1" } 
+{ "code" : "RGC1002", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1002", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1002", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1002", "id" : "4", "lec" : [{ "day" : "Thu", "start" : "110", "end" : "125" } ], "point" : "2" } 
+{ "code" : "RGC1003", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1003", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1003", "id" : "3", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1003", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "115" } ], "point" : "2" } 
+{ "code" : "RGC1004", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1004", "id" : "2", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1004", "id" : "3", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC1004", "id" : "4", "lec" : [{ "day" : "Thu", "start" : "110", "end" : "125" } ], "point" : "2" } 
+{ "code" : "RGC1005", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1005", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1005", "id" : "3", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1005", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "115" } ], "point" : "2" } 
+{ "code" : "RGC1006", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1006", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1006", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC0004", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC0004", "id" : "2", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC0004", "id" : "3", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC0004", "id" : "4", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "7", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "8", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "9", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "10", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "11", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "12", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "13", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "14", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC0005", "id" : "15", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1007", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1007", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1007", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1007", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1007", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1007", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1007", "id" : "7", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1007", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1007", "id" : "9", "lec" : [{ "day" : "Wed", "start" : "120", "end" : "145" } ], "point" : "3" } 
+{ "code" : "RGC1008", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1008", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1008", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1008", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1008", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1008", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1008", "id" : "8", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1008", "id" : "9", "lec" : [{ "day" : "Wed", "start" : "120", "end" : "145" } ], "point" : "3" } 
+{ "code" : "RGC1009", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1009", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1009", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1009", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1009", "id" : "7", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1009", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "7", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "8", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "9", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "10", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "11", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "12", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "13", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "14", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "15", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "16", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "17", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "18", "lec" : [{ "day" : "Thu", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "RGC1014", "id" : "19", "lec" : [{ "day" : "Thu", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "7", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "9", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "10", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "11", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "12", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "13", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "14", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "15", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "16", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "17", "lec" : [{ "day" : "Mon", "start" : "120", "end" : "145" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "18", "lec" : [{ "day" : "Tue", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "RGC1010", "id" : "19", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "7", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "8", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "9", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "10", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "11", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "12", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "13", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "14", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "15", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "16", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "17", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "18", "lec" : [{ "day" : "Tue", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "RGC1011", "id" : "19", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "8", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "9", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "10", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "11", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "12", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "13", "lec" : [{ "day" : "Mon", "start" : "120", "end" : "145" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "14", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "RGC1012", "id" : "15", "lec" : [{ "day" : "Wed", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "7", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "9", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "10", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "11", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "12", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "13", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "14", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "15", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "16", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "17", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "18", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "19", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "20", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1013", "id" : "21", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "RGC1015", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC1015", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1015", "id" : "3", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC1015", "id" : "4", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "RGC1015", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1016", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC1016", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1016", "id" : "3", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1016", "id" : "4", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC1016", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "115" } ], "point" : "2" } 
+{ "code" : "RGC1016", "id" : "6", "lec" : [{ "day" : "Wed", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1017", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC1017", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1017", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1017", "id" : "4", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "RGC1017", "id" : "5", "lec" : [{ "day" : "Wed", "start" : "85", "end" : "100" } ], "point" : "2" } 
+{ "code" : "RGC1035", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC1035", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1035", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1035", "id" : "4", "lec" : [{ "day" : "Fri", "start" : "15", "end" : "30" } ], "point" : "2" } 
+{ "code" : "RGC1036", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1036", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1036", "id" : "3", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1036", "id" : "4", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "115" } ], "point" : "2" } 
+{ "code" : "RGC1037", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1037", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1021", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC1021", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1021", "id" : "3", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1021", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "115" } ], "point" : "2" } 
+{ "code" : "RGC1022", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1022", "id" : "2", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1022", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "115" } ], "point" : "2" } 
+{ "code" : "RGC1022", "id" : "4", "lec" : [{ "day" : "Thu", "start" : "20", "end" : "35" } ], "point" : "2" } 
+{ "code" : "RGC1023", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1023", "id" : "2", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC1023", "id" : "3", "lec" : [{ "day" : "Fri", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1024", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1024", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1024", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1025", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1025", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1025", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1026", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC1026", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1026", "id" : "3", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "RGC1026", "id" : "4", "lec" : [{ "day" : "Fri", "start" : "15", "end" : "30" } ], "point" : "2" } 
+{ "code" : "RGC1027", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1027", "id" : "3", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1027", "id" : "4", "lec" : [{ "day" : "Fri", "start" : "15", "end" : "30" } ], "point" : "2" } 
+{ "code" : "RGC1028", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC1028", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1028", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1028", "id" : "4", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "RGC1028", "id" : "5", "lec" : [{ "day" : "Wed", "start" : "20", "end" : "35" } ], "point" : "2" } 
+{ "code" : "RGC1030", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "7", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "8", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "9", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "10", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "11", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "12", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "13", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "14", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "15", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "16", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "17", "lec" : [{ "day" : "Thu", "start" : "130", "end" : "145" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "18", "lec" : [{ "day" : "Thu", "start" : "130", "end" : "145" } ], "point" : "0" } 
+{ "code" : "RGC1030", "id" : "19", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "0" } 
+{ "code" : "RGC1033", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "9", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "10", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "11", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "12", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "13", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "14", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "15", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "16", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "17", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "18", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "19", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "20", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "21", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "22", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "23", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "24", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "25", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "26", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "27", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "28", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "31", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "32", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "33", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "35", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "36", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "37", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "38", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "39", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "41", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "42", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "43", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "45", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "47", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "48", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "49", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "50", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "51", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "53", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "54", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "55", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "56", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "57", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "58", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "59", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "60", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "61", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "62", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "63", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "64", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "65", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "66", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "67", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "68", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "69", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "70", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "71", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "72", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "73", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "74", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "75", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "76", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "77", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "78", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "79", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "80", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "81", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "82", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "83", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "84", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "85", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "86", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "87", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "88", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "89", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "90", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "91", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "92", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "93", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "94", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "95", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "96", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "97", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "98", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "99", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "100", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "101", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "102", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "103", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "104", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "105", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "106", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "107", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "108", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "109", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "110", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "111", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "112", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "113", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "114", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "115", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "116", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "117", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "118", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "119", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "120", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "121", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "122", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "123", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "124", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "125", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "126", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "127", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "128", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "129", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "130", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "131", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "132", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "134", "lec" : [{ "day" : "Fri", "start" : "110", "end" : "135" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "135", "lec" : [{ "day" : "Fri", "start" : "110", "end" : "135" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "136", "lec" : [{ "day" : "Tue", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "137", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "138", "lec" : [{ "day" : "Thu", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "139", "lec" : [{ "day" : "Thu", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "140", "lec" : [{ "day" : "Thu", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "141", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "142", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "143", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "144", "lec" : [{ "day" : "Thu", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "145", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "147", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1033", "id" : "149", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1034", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC1034", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC1034", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1034", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "85", "end" : "95" } { "day" : "Fri", "start" : "95", "end" : "105" } ], "point" : "3" } 
+{ "code" : "RGC1034", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC1034", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "75" } { "day" : "Thu", "start" : "65", "end" : "75" } ], "point" : "3" } 
+{ "code" : "RGC1034", "id" : "7", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "RGC1034", "id" : "8", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "RGC1034", "id" : "9", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1034", "id" : "10", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "RGC1034", "id" : "12", "lec" : [{ "day" : "Thu", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "RGC3001", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "0" } 
+{ "code" : "RGC3002", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC3002", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "115" } ], "point" : "1" } 
+{ "code" : "RGC3002", "id" : "3", "lec" : [{ "day" : "Fri", "start" : "50", "end" : "65" } ], "point" : "1" } 
+{ "code" : "RGC3003", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC3003", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC3003", "id" : "3", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC3003", "id" : "4", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC3003", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "115" } ], "point" : "1" } 
+{ "code" : "RGC3004", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC3004", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "1" } 
+{ "code" : "RGC3004", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC3004", "id" : "4", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "1" } 
+{ "code" : "RGC3004", "id" : "5", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC3004", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "115" } ], "point" : "1" } 
+{ "code" : "RGC3004", "id" : "7", "lec" : [{ "day" : "Fri", "start" : "70", "end" : "85" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "5", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "6", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "7", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "8", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "10", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "11", "lec" : [{ "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "12", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "115" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "13", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "115" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "14", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "115" } ], "point" : "1" } 
+{ "code" : "RGC3005", "id" : "15", "lec" : [{ "day" : "Fri", "start" : "70", "end" : "85" } ], "point" : "1" } 
+{ "code" : "RGC3006", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } { "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC3006", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } { "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "RGC3007", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "25" } { "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC5008", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC5009", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC5010", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC5011", "id" : "1", "lec" : [{ "day" : "Thu", "start" : "50", "end" : "65" } ], "point" : "2" } 
+{ "code" : "RGC5012", "id" : "1", "lec" : [{ "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "RGC6004", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC6004", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC8005", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC8005", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC8006", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC8006", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC8006", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } ], "point" : "3" } 
+{ "code" : "RGC8007", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC8007", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC8007", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "RGC8008", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC8008", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Fri", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "RGC8008", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Fri", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "RGC1040", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } ], "point" : "2" } 
+{ "code" : "RGC1040", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "RGC1040", "id" : "3", "lec" : [{ "day" : "Fri", "start" : "20", "end" : "35" } ], "point" : "2" } 
+{ "code" : "PRI4001", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "85" } { "day" : "Thu", "start" : "80", "end" : "95" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "7", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "9", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "10", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "11", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "12", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "13", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "14", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "15", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "16", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "17", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "18", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "19", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "20", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "21", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "22", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "23", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "24", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "25", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "26", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "27", "lec" : [{ "day" : "Wed", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "28", "lec" : [{ "day" : "Thu", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "PRI4001", "id" : "29", "lec" : [{ "day" : "Fri", "start" : "55", "end" : "80" } ], "point" : "3" } 
+{ "code" : "PRI4002", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } { "day" : "Fri", "start" : "60", "end" : "75" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "25" } { "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Wed", "start" : "80", "end" : "95" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "55" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Wed", "start" : "10", "end" : "25" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "7", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Tue", "start" : "50", "end" : "65" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "25" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "9", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Tue", "start" : "30", "end" : "45" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "10", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } { "day" : "Thu", "start" : "30", "end" : "45" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "11", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "80", "end" : "95" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "12", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "80", "end" : "95" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "13", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Thu", "start" : "50", "end" : "65" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "14", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Tue", "start" : "80", "end" : "95" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "15", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "55" } { "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "16", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } { "day" : "Mon", "start" : "130", "end" : "145" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "17", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } { "day" : "Tue", "start" : "130", "end" : "145" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "18", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } { "day" : "Wed", "start" : "130", "end" : "145" } ], "point" : "4" } 
+{ "code" : "PRI4002", "id" : "19", "lec" : [{ "day" : "Tue", "start" : "40", "end" : "65" } { "day" : "Wed", "start" : "50", "end" : "65" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Tue", "start" : "10", "end" : "25" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } { "day" : "Thu", "start" : "10", "end" : "25" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Tue", "start" : "30", "end" : "45" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Tue", "start" : "80", "end" : "95" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Wed", "start" : "60", "end" : "75" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "6", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Wed", "start" : "80", "end" : "95" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "7", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } { "day" : "Fri", "start" : "60", "end" : "75" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } { "day" : "Mon", "start" : "130", "end" : "145" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "9", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } { "day" : "Wed", "start" : "130", "end" : "145" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "10", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "65" } { "day" : "Fri", "start" : "10", "end" : "25" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "11", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "35" } { "day" : "Fri", "start" : "35", "end" : "50" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "12", "lec" : [{ "day" : "Mon", "start" : "75", "end" : "85" } { "day" : "Wed", "start" : "75", "end" : "85" } { "day" : "Fri", "start" : "60", "end" : "75" } ], "point" : "4" } 
+{ "code" : "PRI4003", "id" : "13", "lec" : [{ "day" : "Tue", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "50", "end" : "60" } { "day" : "Fri", "start" : "85", "end" : "100" } ], "point" : "4" } 
+{ "code" : "PRI4004", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "25" } { "day" : "Thu", "start" : "80", "end" : "95" } ], "point" : "3" } 
+{ "code" : "PRI4004", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "95" } { "day" : "Thu", "start" : "10", "end" : "25" } ], "point" : "3" } 
+{ "code" : "PRI4004", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "115" } { "day" : "Mon", "start" : "120", "end" : "135" } ], "point" : "3" } 
+{ "code" : "PRI4004", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "85" } { "day" : "Wed", "start" : "20", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4004", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "20", "end" : "35" } { "day" : "Wed", "start" : "70", "end" : "85" } ], "point" : "3" } 
+{ "code" : "PRI4004", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "20", "end" : "35" } { "day" : "Thu", "start" : "20", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4005", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "25" } { "day" : "Thu", "start" : "30", "end" : "45" } ], "point" : "3" } 
+{ "code" : "PRI4005", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "135" } ], "point" : "3" } 
+{ "code" : "PRI4006", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI4010", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Tue", "start" : "45", "end" : "60" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "4" } 
+{ "code" : "PRI4010", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "50", "end" : "60" } { "day" : "Wed", "start" : "50", "end" : "60" } { "day" : "Thu", "start" : "70", "end" : "85" } ], "point" : "4" } 
+{ "code" : "PRI4010", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "80" } { "day" : "Wed", "start" : "70", "end" : "80" } { "day" : "Thu", "start" : "45", "end" : "60" } ], "point" : "4" } 
+{ "code" : "PRI4010", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "25", "end" : "35" } { "day" : "Tue", "start" : "70", "end" : "85" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "4" } 
+{ "code" : "PRI4011", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } { "day" : "Fri", "start" : "40", "end" : "55" } ], "point" : "4" } 
+{ "code" : "PRI4011", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "60", "end" : "75" } ], "point" : "4" } 
+{ "code" : "PRI4012", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4012", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI4023", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4023", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4023", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI4023", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI4023", "id" : "5", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI4023", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "PRI4024", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI4024", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI4024", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI4025", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4025", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4025", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4025", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI4025", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI4025", "id" : "6", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI4025", "id" : "7", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI4025", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4027", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4027", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4027", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4027", "id" : "4", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI4027", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI4028", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4028", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI4028", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI4028", "id" : "4", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI4028", "id" : "5", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI4033", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4033", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI4035", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "25" } { "day" : "Thu", "start" : "10", "end" : "25" } ], "point" : "3" } 
+{ "code" : "PRI4035", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "45" } { "day" : "Thu", "start" : "30", "end" : "45" } ], "point" : "3" } 
+{ "code" : "PRI4035", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "95" } { "day" : "Thu", "start" : "80", "end" : "95" } ], "point" : "3" } 
+{ "code" : "PRI4035", "id" : "5", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "75" } { "day" : "Fri", "start" : "60", "end" : "75" } ], "point" : "3" } 
+{ "code" : "PRI4035", "id" : "6", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "95" } { "day" : "Fri", "start" : "40", "end" : "55" } ], "point" : "3" } 
+{ "code" : "PRI4035", "id" : "8", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "45" } { "day" : "Thu", "start" : "30", "end" : "45" } ], "point" : "3" } 
+{ "code" : "PRI4035", "id" : "9", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "95" } { "day" : "Thu", "start" : "80", "end" : "95" } ], "point" : "3" } 
+{ "code" : "PRI4035", "id" : "11", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "95" } { "day" : "Fri", "start" : "40", "end" : "55" } ], "point" : "3" } 
+{ "code" : "PRI4035", "id" : "12", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "135" } ], "point" : "3" } 
+{ "code" : "PRI4035", "id" : "13", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "135" } ], "point" : "3" } 
+{ "code" : "PRI4036", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4036", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI4036", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI4037", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "55" } { "day" : "Wed", "start" : "10", "end" : "25" } ], "point" : "3" } 
+{ "code" : "PRI4037", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "25" } { "day" : "Thu", "start" : "10", "end" : "25" } ], "point" : "3" } 
+{ "code" : "PRI4037", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "45" } { "day" : "Thu", "start" : "30", "end" : "45" } ], "point" : "3" } 
+{ "code" : "PRI4037", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "95" } { "day" : "Thu", "start" : "80", "end" : "95" } ], "point" : "3" } 
+{ "code" : "PRI4037", "id" : "6", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "75" } { "day" : "Fri", "start" : "60", "end" : "75" } ], "point" : "3" } 
+{ "code" : "PRI4037", "id" : "7", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "95" } { "day" : "Fri", "start" : "40", "end" : "55" } ], "point" : "3" } 
+{ "code" : "PRI4037", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "135" } ], "point" : "3" } 
+{ "code" : "PRI4037", "id" : "9", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "135" } ], "point" : "3" } 
+{ "code" : "PRI4037", "id" : "10", "lec" : [{ "day" : "Wed", "start" : "100", "end" : "135" } ], "point" : "3" } 
+{ "code" : "PRI4037", "id" : "11", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "135" } ], "point" : "3" } 
+{ "code" : "PRI4040", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4040", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4040", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI4040", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI4040", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI4041", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4041", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4041", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4041", "id" : "4", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI4041", "id" : "5", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI4041", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI4043", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI4043", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI4043", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI4043", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI4043", "id" : "5", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI4043", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI4046", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "90", "end" : "95" } ], "point" : "1" } 
+{ "code" : "PRI5001", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5001", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI5001", "id" : "4", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI5002", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5002", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5002", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI5002", "id" : "4", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI5002", "id" : "5", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI5002", "id" : "6", "lec" : [{ "day" : "Wed", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5002", "id" : "7", "lec" : [{ "day" : "Tue", "start" : "110", "end" : "135" } ], "point" : "3" } 
+{ "code" : "PRI5051", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5051", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5051", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5051", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI5051", "id" : "5", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI5051", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI5073", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5073", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI5074", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5074", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5075", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5075", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI5075", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "PRI5076", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI5079", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5079", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5081", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5081", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5081", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5081", "id" : "4", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI5081", "id" : "5", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI5081", "id" : "6", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5081", "id" : "7", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5081", "id" : "8", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI5081", "id" : "9", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI5081", "id" : "10", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5081", "id" : "11", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI5082", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "3", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "6", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "7", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "8", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "9", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "10", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "11", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "12", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "13", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "14", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "15", "lec" : [{ "day" : "Thu", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "PRI5083", "id" : "16", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5084", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI5085", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5085", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI5087", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5087", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI5089", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5089", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI5091", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI5091", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI5093", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI5095", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5095", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5095", "id" : "4", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "PRI5095", "id" : "5", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI5095", "id" : "6", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "PRI5095", "id" : "7", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "PRI5095", "id" : "8", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5095", "id" : "9", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "PRI5095", "id" : "10", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI5095", "id" : "11", "lec" : [{ "day" : "Tue", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "PRI5095", "id" : "12", "lec" : [{ "day" : "Tue", "start" : "110", "end" : "135" } ], "point" : "3" } 
+{ "code" : "PRI5096", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "PRI5097", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "PRI5097", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "DEV0006", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "95" } ], "point" : "1" } 
+{ "code" : "EGC7076", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "EGC7021", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "45" } ], "point" : "1" } 
+{ "code" : "DEV1004", "id" : "1", "lec" : [{ "day" : "Thu", "start" : "30", "end" : "45" } ], "point" : "2" } 
+{ "code" : "EGC2065", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "EGC2065", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "EGC2065", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "DEV1042", "id" : "4", "lec" : [{ "day" : "Mon", "start" : "100", "end" : "125" } ], "point" : "3" } 
+{ "code" : "DEV1042", "id" : "3", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "105" } ], "point" : "3" } 
+{ "code" : "DEV1042", "id" : "1", "lec" : [{ "day" : "Thu", "start" : "30", "end" : "55" } ], "point" : "3" } 
+{ "code" : "DEV1042", "id" : "2", "lec" : [{ "day" : "Thu", "start" : "80", "end" : "105" } ], "point" : "3" } 
+{ "code" : "DEV1053", "id" : "1", "lec" : [{ "day" : "Fri", "start" : "60", "end" : "75" } ], "point" : "2" } 
+{ "code" : "DEV1053", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "75" } ], "point" : "2" } 
+{ "code" : "DEV1053", "id" : "4", "lec" : [{ "day" : "Fri", "start" : "30", "end" : "45" } ], "point" : "2" } 
+{ "code" : "DEV1053", "id" : "3", "lec" : [{ "day" : "Fri", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "EGC7065", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "65", "end" : "80" } ], "point" : "2" } 
+{ "code" : "EGC7065", "id" : "1", "lec" : [{ "day" : "Fri", "start" : "60", "end" : "75" } ], "point" : "2" } 
+{ "code" : "EGC7066", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "EGC7014", "id" : "1", "lec" : [{ "day" : "Thu", "start" : "10", "end" : "25" } ], "point" : "1" } 
+{ "code" : "EGC2053", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "EGC3036", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "EGC3036", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "DEV1032", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "EGC7009", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "75" } ], "point" : "1" } 
+{ "code" : "EGC2064", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "EGC2062", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "EGC2046", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "EGC2047", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "75" } ], "point" : "2" } 
+{ "code" : "EGC2075", "id" : "1", "lec" : [{ "day" : "Thu", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "EGC3002", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC4013", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "EGC2058", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "EGC7012", "id" : "1", "lec" : [{ "day" : "Fri", "start" : "40", "end" : "55" } ], "point" : "1" } 
+{ "code" : "EGC3029", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "EGC3027", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "EGC7071", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "EGC3031", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC2054", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC2052", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "DEV1010", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "25", "end" : "40" } ], "point" : "2" } 
+{ "code" : "DEV1010", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "45" } ], "point" : "2" } 
+{ "code" : "DEV1005", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "DEV1031", "id" : "1", "lec" : [{ "day" : "Thu", "start" : "90", "end" : "105" } ], "point" : "1" } 
+{ "code" : "EGC2067", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "EGC2067", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "EGC4012", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "10", "end" : "35" } ], "point" : "3" } 
+{ "code" : "EGC2078", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "EGC2076", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "EGC2077", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC2061", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "40", "end" : "65" } ], "point" : "3" } 
+{ "code" : "EGC2061", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "90" } { "day" : "Fri", "start" : "40", "end" : "50" } ], "point" : "3" } 
+{ "code" : "EGC2060", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "DEV1055", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "EGC7039", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "25", "end" : "40" } ], "point" : "2" } 
+{ "code" : "EGC2057", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "EGC2057", "id" : "2", "lec" : [{ "day" : "Thu", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "EGC3030", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "EGC2059", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "70", "end" : "95" } ], "point" : "3" } 
+{ "code" : "EGC2059", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC4014", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "EGC2051", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "EGC1057", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "DEV1013", "id" : "1", "lec" : [{ "day" : "Thu", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "EGC2080", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "75" } ], "point" : "2" } 
+{ "code" : "EGC2080", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "EGC7072", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "EGC7037", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC2055", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC1053", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC7055", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "EGC2063", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "EGC2068", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "EGC7067", "id" : "1", "lec" : [{ "day" : "Thu", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "EGC6075", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "EGC3025", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC3039", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC3039", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "EGC3028", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "EGC3038", "id" : "1", "lec" : [{ "day" : "Mon", "start" : "40", "end" : "50" } { "day" : "Wed", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC3038", "id" : "2", "lec" : [{ "day" : "Mon", "start" : "55", "end" : "65" } { "day" : "Wed", "start" : "25", "end" : "35" } ], "point" : "3" } 
+{ "code" : "EGC2079", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "70" } { "day" : "Fri", "start" : "60", "end" : "70" } ], "point" : "3" } 
+{ "code" : "DEV1007", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "DEV1007", "id" : "2", "lec" : [{ "day" : "Thu", "start" : "30", "end" : "45" } ], "point" : "2" } 
+{ "code" : "DEV1040", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "DEV1057", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "DEV1008", "id" : "1", "lec" : [{ "day" : "Fri", "start" : "60", "end" : "75" } ], "point" : "2" } 
+{ "code" : "DEV1003", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "75" } ], "point" : "2" } 
+{ "code" : "DEV1003", "id" : "1", "lec" : [{ "day" : "Fri", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "EGC7075", "id" : "1", "lec" : [{ "day" : "Thu", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "DEV1001", "id" : "1", "lec" : [{ "day" : "Fri", "start" : "40", "end" : "55" } ], "point" : "2" } 
+{ "code" : "EGC7044", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "35" } ], "point" : "2" } 
+{ "code" : "EGC7044", "id" : "2", "lec" : [{ "day" : "Thu", "start" : "100", "end" : "125" } ], "point" : "2" } 
+{ "code" : "EGC7044", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "10", "end" : "35" } ], "point" : "2" } 
+{ "code" : "EGC6007", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "60", "end" : "75" } ], "point" : "2" } 
+{ "code" : "EGC2066", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "EGC8009", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "EGC8009", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "25" } ], "point" : "2" } 
+{ "code" : "EGC8010", "id" : "4", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "EGC8010", "id" : "2", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "EGC8010", "id" : "3", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "EGC8010", "id" : "1", "lec" : [{ "day" : "Wed", "start" : "80", "end" : "95" } ], "point" : "2" } 
+{ "code" : "EGC8011", "id" : "2", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "45" } ], "point" : "2" } 
+{ "code" : "EGC8011", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "45" } ], "point" : "2" } 
+{ "code" : "EGC8011", "id" : "5", "lec" : [{ "day" : "Thu", "start" : "30", "end" : "45" } ], "point" : "2" } 
+{ "code" : "EGC8011", "id" : "4", "lec" : [{ "day" : "Thu", "start" : "30", "end" : "45" } ], "point" : "2" } 
+{ "code" : "EGC8011", "id" : "3", "lec" : [{ "day" : "Thu", "start" : "30", "end" : "45" } ], "point" : "2" } 
+{ "code" : "EGC2070", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "EGC2071", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "90" } { "day" : "Thu", "start" : "80", "end" : "90" } ], "point" : "3" } 
+{ "code" : "EGC3033", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "10", "end" : "20" } { "day" : "Thu", "start" : "10", "end" : "20" } ], "point" : "3" } 
+{ "code" : "EGC3026", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "30", "end" : "40" } { "day" : "Thu", "start" : "30", "end" : "40" } ], "point" : "3" } 
+{ "code" : "DEV1009", "id" : "1", "lec" : [{ "day" : "Fri", "start" : "60", "end" : "75" } ], "point" : "2" } 
+{ "code" : "EGC7015", "id" : "1", "lec" : [{ "day" : "Tue", "start" : "80", "end" : "95" } ], "point" : "1" } 
  ] } 

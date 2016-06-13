@@ -30,8 +30,8 @@ class CrsTable
     // Summation of courses' point
     size_t pt_sum{};
     // Course list
-    std::deque<Course> crs_list{};
 public:
+	std::deque<Course> crs_list{};
     explicit CrsTable() = default;
 
     void append(const Course& crs) noexcept(false)
