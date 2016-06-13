@@ -9,13 +9,15 @@ namespace project
     template <class Elem>
     struct Chain
     {
-        const Elem base;
+        Elem base;
         Deq<Elem>  next;
 
-        explicit Chain(Elem& _base) :
+        explicit Chain(const Elem& _base) :
             base(_base)
         {};
-
+        explicit Chain(Elem&& _base) :
+            base(_base)
+        {};
         // Linear 탐색?
         const Elem& at(int i) const
             noexcept(false)
@@ -50,8 +52,26 @@ namespace project
                 }
             });
         }
+
+        bool operator ==(const Chain& _rhs) const 
+            noexcept
+        {
+            return (base == _rhs.base) 
+                    && (next == _rhs.next);
+        }
     
     };
+
+    template <class E>
+    constexpr 
+        bool operator ==(const Chain<E>& _lhs,
+                         const Chain<E>& _rhs)
+        noexcept 
+    {
+        return (_lhs.base == _rhs.base) 
+                && (_lhs.next == _rhs.next);
+    }
+
 }
 
 #endif

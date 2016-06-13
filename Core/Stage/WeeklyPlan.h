@@ -215,7 +215,7 @@ namespace project
     template <class I, class J, class T>
     constexpr 
         bool operator ==(const Plan<I, J, T>& _lhs,
-            const Plan<I, J, T>& _rhs) noexcept
+                         const Plan<I, J, T>& _rhs) noexcept
     {
         return (_lhs.id() == _rhs.id())
             && (_lhs.job() == _rhs.job())
