@@ -9,6 +9,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{2dfc5ee3-6760-4e1d-ba07-028067a71a27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stage">
+      <UniqueIdentifier>{efa9adff-af25-4ca5-9144-df0833de4a87}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Course.cpp">
@@ -22,8 +28,12 @@
     </ClCompile>
     <ClCompile Include="Base.cpp" />
     <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="Test\io_test.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage\stage_test.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
     <ClInclude Include="Model\Course.h">
       <Filter>Model</Filter>
     </ClInclude>
@@ -43,10 +53,24 @@
     <ClInclude Include="Model\Interpreter.hpp">
       <Filter>Model</Filter>
     </ClInclude>
+    <ClInclude Include="Stage\Schedule.h">
+      <Filter>Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage\Chain.h">
+      <Filter>Stage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
       <Filter>Others</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Stage\Time.hpp">
+      <Filter>Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage\Plan.hpp">
+      <Filter>Stage</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
