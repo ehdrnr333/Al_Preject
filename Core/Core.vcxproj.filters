@@ -1,22 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Model">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Others">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Test">
-      <UniqueIdentifier>{2dfc5ee3-6760-4e1d-ba07-028067a71a27}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Stage">
-      <UniqueIdentifier>{efa9adff-af25-4ca5-9144-df0833de4a87}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="Base.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Model\Course.cpp">
       <Filter>Model</Filter>
     </ClCompile>
@@ -26,25 +12,24 @@
     <ClCompile Include="Model\LecTime.cpp">
       <Filter>Model</Filter>
     </ClCompile>
-    <ClCompile Include="Base.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Subject.cpp">
-      <Filter>Model</Filter>
+      <Filter>Original</Filter>
     </ClCompile>
     <ClCompile Include="SubTable.cpp">
-      <Filter>Model</Filter>
+      <Filter>Original</Filter>
     </ClCompile>
     <ClCompile Include="TableResult.cpp">
-      <Filter>Model</Filter>
+      <Filter>Original</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="Stage\stage_test.cpp">
+      <Filter>Stage</Filter>
+    </ClCompile>
     <ClCompile Include="Test\io_test.cpp">
       <Filter>Test</Filter>
     </ClCompile>
-    <ClCompile Include="Stage\stage_test.cpp">
-      <Filter>Test</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base.h" />
     <ClInclude Include="Model\Course.h">
       <Filter>Model</Filter>
     </ClInclude>
@@ -54,42 +39,52 @@
     <ClInclude Include="Model\Day.h">
       <Filter>Model</Filter>
     </ClInclude>
+    <ClInclude Include="Model\Interpreter.hpp">
+      <Filter>Model</Filter>
+    </ClInclude>
     <ClInclude Include="Model\LecTime.h">
       <Filter>Model</Filter>
     </ClInclude>
     <ClInclude Include="Model\RBTree.h">
       <Filter>Model</Filter>
     </ClInclude>
-    <ClInclude Include="Base.h" />
-    <ClInclude Include="Model\Interpreter.hpp">
-      <Filter>Model</Filter>
-    </ClInclude>
     <ClInclude Include="Subject.h">
-      <Filter>Model</Filter>
+      <Filter>Original</Filter>
     </ClInclude>
     <ClInclude Include="SubTable.h">
-      <Filter>Model</Filter>
+      <Filter>Original</Filter>
     </ClInclude>
     <ClInclude Include="TableResult.h">
-      <Filter>Model</Filter>
-    <ClInclude Include="Stage\Schedule.h">
-      <Filter>Stage</Filter>
+      <Filter>Original</Filter>
     </ClInclude>
     <ClInclude Include="Stage\Chain.h">
-      <Filter>Stage</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="README.md">
-      <Filter>Others</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Stage\Time.hpp">
       <Filter>Stage</Filter>
     </ClInclude>
     <ClInclude Include="Stage\Plan.hpp">
       <Filter>Stage</Filter>
     </ClInclude>
+    <ClInclude Include="Stage\Schedule.h">
+      <Filter>Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage\Time.hpp">
+      <Filter>Stage</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Model">
+      <UniqueIdentifier>{e28419f6-a83a-43d0-a809-44fb6f340ff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stage">
+      <UniqueIdentifier>{1b1a7568-5d36-4aab-9019-3316da3d15d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Original">
+      <UniqueIdentifier>{c9761113-ba22-43d5-8a1f-2e4f9919971e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{b3f5ecc8-42a7-4157-b4c0-9ce54b29da93}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
