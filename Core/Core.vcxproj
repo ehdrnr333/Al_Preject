@@ -118,6 +118,8 @@
     <ClCompile Include="Subject.cpp" />
     <ClCompile Include="SubTable.cpp" />
     <ClCompile Include="TableResult.cpp" />
+    <ClCompile Include="Stage\stage_test.cpp" />
+    <ClCompile Include="Test\io_test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
@@ -130,6 +132,10 @@
     <ClInclude Include="Subject.h" />
     <ClInclude Include="SubTable.h" />
     <ClInclude Include="TableResult.h" />
+    <ClInclude Include="Stage\Chain.h" />
+    <ClInclude Include="Stage\Schedule.h" />
+    <ClInclude Include="Stage\Time.hpp" />
+    <ClInclude Include="Stage\Plan.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

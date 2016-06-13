@@ -26,12 +26,14 @@
 #include <typeinfo>
 #include <type_traits>
 
-#include <algorithm>
-#include <iterator>
-
 #include <array>
 #include <vector>
+#include <map>
 #include <deque>
+#include <list>
+
+#include <algorithm>
+#include <iterator>
 
 #include <exception>
 #include <stdexcept>
@@ -43,16 +45,9 @@
 #include <cstring>
 #include <cctype>
 
-// Qt Framework ( 5.6.0 )
-
-
-
-// Project Definitions
-// ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 
 namespace project
 {
-
     template <class T>
     constexpr std::int32_t int_cast(T&& _obj){
         return static_cast<std::int32_t>(_obj);
@@ -64,14 +59,32 @@ namespace project
 
     // - Note
     //      Short notation for unique_ptr
-    template <typename T>
+    template <typename T>    
     using uptr = std::unique_ptr<T>;
 
     // - Note
     //      Short notation for shared_ptr
-    template <typename T>
+    template <typename T>    
     using sptr = std::shared_ptr<T>;
 
+
+    template <typename T, size_t sz>
+    using Ary = std::array<T, sz>;
+
+    template <typename T>    
+    using Vec = std::vector<T>;
+
+    template <typename T>    
+    using Deq = std::deque<T>;
+
+    template <typename T>    
+    using Que = std::deque<T>;
+
+    template <typename T>    
+    using List = std::list<T>;
+
+    template <typename K, class V>
+    using Map = std::map<K, V>;
 
 
     // Utilities
@@ -101,38 +114,6 @@ namespace project
     // - Example
     //      cin >> skip_line ;
     std::istream& skip_line(std::istream& _in) noexcept(false);
-
-
-    template <std::ostream& out, class T>
-    void WriteLine(std::string&& _label, const T& obj)
-        noexcept(false)
-    {
-        out << _label << obj << '\n';
-    }
-
-    template <std::ostream& out, class T>
-    void WriteLine(std::string&& _label, T&& obj)
-        noexcept(false)
-    {
-        out << _label << obj << '\n';
-    }
-
-
-
-    template <std::ostream& out, class T>
-    void WriteLine(const T& obj)
-        noexcept(false)
-    {
-        out << obj << '\n';
-    }
-
-    template <std::ostream& out, class T>
-    void WriteLine(T&& obj)
-        noexcept(false)
-    {
-        out << obj << '\n';
-    }
-
 
 
 } // namespace project
