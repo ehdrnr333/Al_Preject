@@ -9,6 +9,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Filtering">
+      <UniqueIdentifier>{68365075-5be9-474b-b008-42e8b72d2a5a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Model\Course.cpp">
@@ -22,6 +25,15 @@
     </ClCompile>
     <ClCompile Include="Base.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Filtering\NameFilter.cpp">
+      <Filter>Filtering</Filter>
+    </ClCompile>
+    <ClCompile Include="Filtering\TimeFilter.cpp">
+      <Filter>Filtering</Filter>
+    </ClCompile>
+    <ClCompile Include="Filtering\TimeFlag.cpp">
+      <Filter>Filtering</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Course.h">
@@ -42,6 +54,15 @@
     <ClInclude Include="Base.h" />
     <ClInclude Include="Model\Interpreter.hpp">
       <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Filtering\NameFilter.h">
+      <Filter>Filtering</Filter>
+    </ClInclude>
+    <ClInclude Include="Filtering\TimeFilter.h">
+      <Filter>Filtering</Filter>
+    </ClInclude>
+    <ClInclude Include="Filtering\TimeFlag.h">
+      <Filter>Filtering</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

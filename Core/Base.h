@@ -32,6 +32,7 @@
 #include <array>
 #include <vector>
 #include <deque>
+#include <map>
 
 #include <exception>
 #include <stdexcept>
@@ -42,6 +43,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <cctype>
+#include <cmath>
 
 // Qt Framework ( 5.6.0 )
 

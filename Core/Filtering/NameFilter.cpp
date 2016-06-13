@@ -1,5 +1,19 @@
 #include "NameFilter.h"	
+
 using namespace std;
+using namespace project;
+
+std::string key(const Course& _crs) {
+	//std::ostringstream sout;
+	//sout << _crs.code() << "-" << _crs.id();
+	//return sout.str();
+	return _crs.code();
+}
+
+int priority(const Course& _crs) {
+	return _crs.point();
+}
+
 
 NameFilter::NameFilter(const vector<Course>& vec)
 {
@@ -12,10 +26,13 @@ NameFilter::NameFilter(const vector<Course>& vec)
 	indexes_choosed.resize(TABLES_COUNT);
 
 	//시간표 정보 삽입(first : index, second : priority)
-	for (int i = 0; i < vec.size(); ++i)
-		course_sets[vec[i].key()].push_back(
-			pair<int, int>(i, vec[i].priority()));
-	
+	for (int i = 0; i < vec.size(); ++i) {
+		auto K = key(vec[i]);
+		auto Pri = priority(vec[i]);
+			course_sets[K].push_back(
+				pair<int, int>(i, Pri));
+	}
+
 	//Priority를 TABLES_COUNT만큼 정규화
 	for (auto& set : course_sets) {
 		sort_courses(set.second);
@@ -27,9 +44,9 @@ NameFilter::NameFilter(const vector<Course>& vec)
 
 vector<vector<Course>>& NameFilter::get_result()
 {
-
+	auto& chosed = indexes_choosed;
 	//인덱스 출력용
-	for (auto a : indexes_choosed) {
+	for (auto a : chosed) {
 		for (auto b : a){
 			cout << b << " ";
 		}
@@ -38,19 +55,27 @@ vector<vector<Course>>& NameFilter::get_result()
 	
 	
 	//중복성 제거
-	for (int i = 0; i < indexes_choosed.size(); ++i) {
+	for (int i = 0; i < chosed.size(); ++i) {
+		try {
+			auto iter = chosed.begin();
+			std::advance(iter, i + 1);
 
-		for (auto iter = indexes_choosed.begin() + i + 1; 
-					iter != indexes_choosed.end(); ++iter ) {
-			if (indexes_choosed[i] == (*iter)) {
-				indexes_choosed.erase(iter);
-				iter = indexes_choosed.begin();
-				advance(iter, i + 1);
+			for (; iter != chosed.end(); ++iter)
+			{
+				if (chosed[i] == (*iter)) {
+					chosed.erase(iter);
+
+					iter = chosed.begin();
+					advance(iter, i + 1);
+				}
 			}
+		}
+		catch (std::exception& ex) {
+			std::cerr << ex.what() << std::endl;
 		}
 
 	}
-
+	
 	tables_filtered.resize(indexes_choosed.size());
 
 	for (int i = 0; i < indexes_choosed.size(); ++i) {

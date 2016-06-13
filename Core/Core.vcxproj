@@ -111,6 +111,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Base.cpp" />
+    <ClCompile Include="Filtering\NameFilter.cpp" />
+    <ClCompile Include="Filtering\TimeFilter.cpp" />
+    <ClCompile Include="Filtering\TimeFlag.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model\Course.cpp" />
     <ClCompile Include="Model\Day.cpp" />
@@ -118,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Filtering\NameFilter.h" />
+    <ClInclude Include="Filtering\TimeFilter.h" />
+    <ClInclude Include="Filtering\TimeFlag.h" />
     <ClInclude Include="Model\Course.h" />
     <ClInclude Include="Model\CrsTable.hpp" />
     <ClInclude Include="Model\Day.h" />

@@ -1,6 +1,8 @@
 ﻿
 #include "./Model/Interpreter.hpp"
 #include "./Model/CrsTable.hpp"
+#include "./Filtering/NameFilter.h"
+#include "./Filtering/TimeFilter.h"
 
 using namespace std;
 using namespace project;
@@ -18,11 +20,51 @@ int io_test(const std::string _ipath,
     // Skip the first line (CSV headings)
     fin >> skip_line;
 
-
-
     Interpreter<Course> IL{fin};
     CrsTable<Course>    Table;
 
+	CrsTable<Course> tbl;
+
+	vector<Course> d;
+
+	d.emplace_back(Course{ "Algorithm", 1, 3 });
+	d.emplace_back(Course{ "Algorithm", 2, 3 });
+	d.emplace_back(Course{ "Algorithm", 3, 3 });
+
+	d.emplace_back(Course{ "Pattern", 1, 3 });
+	d.emplace_back(Course{ "Pattern", 2, 3 });
+	d.emplace_back(Course{ "Pattern", 3, 3 });
+
+	d.emplace_back(Course{ "OS", 1, 3 });
+	d.emplace_back(Course{ "OS", 2, 3 });
+	
+	d.emplace_back(Course{ "OS", 3, 3 });
+
+	d.emplace_back(Course{ "DIP", 1, 3 });
+	d.emplace_back(Course{ "DIP", 2, 3 });
+
+	d.emplace_back(Course{ "DS", 1, 3 });
+	d.emplace_back(Course{ "DS", 2, 3 });
+	d.emplace_back(Course{ "DS", 3, 3 });
+
+	d[0].addTime(LecTime{ WeekDay(0), 10, 20 });
+	d[4].addTime(LecTime{ WeekDay(0), 15, 30 });
+	d[7].addTime(LecTime{ WeekDay(1), 15, 25 });
+	d[10].addTime(LecTime{ WeekDay(3), 10, 20 });
+
+	NameFilter f{ d };
+
+	auto& n_filter_result = f.get_result();
+
+	TimeFilter t{ n_filter_result };
+
+	auto& t_filter_result = t.get_result();
+	
+	for (const auto& v : n_filter_result) {
+		for (const auto& crs : v) {
+			Table.append(crs);
+		}
+	}
 
     // Until the stream is good, keep going
     while(fin){
@@ -52,7 +94,9 @@ int io_test(const std::string _ipath,
 
 
 int main(int argc, char* argv[]){
+
     try{
+		
         return io_test("TestCase_euckr.txt", "TestResult.txt");
     }
     catch(...){
