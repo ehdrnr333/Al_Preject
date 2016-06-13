@@ -28,21 +28,23 @@ template <class Course>
 class CrsTable
 {
     // Summation of courses' point
-    size_t pt_sum{};
     // Course list
-    std::deque<Course> crs_list{};
 public:
+    std::deque<Course> crs_list{};
     explicit CrsTable() = default;
 
     void append(const Course& crs) noexcept(false)
     {
-        pt_sum += crs.point();
         crs_list.push_back(crs);
     }
 
     size_t total_point() const noexcept
     {
-        return pt_sum;
+		size_t sum{0};
+		for (const auto& crs : crs_list) {
+			sum += crs.point();
+		}
+        return sum;
     }
 
     size_t size() const noexcept {
