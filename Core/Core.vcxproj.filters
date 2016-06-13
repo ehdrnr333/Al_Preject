@@ -12,20 +12,20 @@
     <ClCompile Include="Model\LecTime.cpp">
       <Filter>Model</Filter>
     </ClCompile>
-    <ClCompile Include="Subject.cpp">
-      <Filter>Original</Filter>
-    </ClCompile>
-    <ClCompile Include="SubTable.cpp">
-      <Filter>Original</Filter>
-    </ClCompile>
-    <ClCompile Include="TableResult.cpp">
-      <Filter>Original</Filter>
-    </ClCompile>
     <ClCompile Include="Stage\stage_test.cpp">
       <Filter>Stage</Filter>
     </ClCompile>
     <ClCompile Include="Test\io_test.cpp">
       <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Original\Subject.cpp">
+      <Filter>Original</Filter>
+    </ClCompile>
+    <ClCompile Include="Original\SubTable.cpp">
+      <Filter>Original</Filter>
+    </ClCompile>
+    <ClCompile Include="Original\TableResult.cpp">
+      <Filter>Original</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,15 +48,6 @@
     <ClInclude Include="Model\RBTree.h">
       <Filter>Model</Filter>
     </ClInclude>
-    <ClInclude Include="Subject.h">
-      <Filter>Original</Filter>
-    </ClInclude>
-    <ClInclude Include="SubTable.h">
-      <Filter>Original</Filter>
-    </ClInclude>
-    <ClInclude Include="TableResult.h">
-      <Filter>Original</Filter>
-    </ClInclude>
     <ClInclude Include="Stage\Chain.h">
       <Filter>Stage</Filter>
     </ClInclude>
@@ -68,6 +59,15 @@
     </ClInclude>
     <ClInclude Include="Stage\Time.hpp">
       <Filter>Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Original\Subject.h">
+      <Filter>Original</Filter>
+    </ClInclude>
+    <ClInclude Include="Original\SubTable.h">
+      <Filter>Original</Filter>
+    </ClInclude>
+    <ClInclude Include="Original\TableResult.h">
+      <Filter>Original</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
