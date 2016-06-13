@@ -5,19 +5,15 @@
 using namespace std;
 using namespace project;
 
-
 // - Note :
 //      Parsing the exace colum...
-int io_test(const std::string _ipath,
-    const std::string _opath)
-{
+int io_test(const std::string _ipath, const std::string _opath){
+
     // Open the file
-    std::ifstream fin{ _ipath,
-        ios_base::in };
+    std::ifstream fin{ _ipath, ios_base::in };
 
     // Skip the first line (CSV headings)
     fin >> skip_line;
-
 
 
     Interpreter<Course> IL{ fin };
@@ -25,7 +21,8 @@ int io_test(const std::string _ipath,
 
 
     // Until the stream is good, keep going
-    while (fin) {
+    while (fin) 
+    {
         try {
             // Generate the course and append it to table
             auto crs = IL.generate();
@@ -39,8 +36,7 @@ int io_test(const std::string _ipath,
     }
 
 
-    std::ofstream fout{ _opath,
-        ios_base::out | ios_base::trunc };
+    std::ofstream fout{ _opath, ios_base::out | ios_base::trunc };
 
     fout << Table << std::endl;
 
@@ -49,3 +45,4 @@ int io_test(const std::string _ipath,
 
     return EXIT_SUCCESS;
 }
+

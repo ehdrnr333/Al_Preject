@@ -14,11 +14,13 @@
 // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 #ifndef LECTIME_H
 #define LECTIME_H
-
+#include "../Stage/Time.hpp"
 #include "./Day.h"
 
 namespace project
 {
+    using DTime = DateTime<WeekDay, int>;
+
     // - Note
     //      1 Lecture Time in a week
     //
@@ -27,33 +29,31 @@ namespace project
     //      the other's start time.
     // - Concept
     //      Value Semantic
-    class LecTime
+    class LecTime : 
+        public TaskTime<DTime, int>
     {
-        WeekDay  weekday;
-        int      start_tm;
-        int      end_tm;
-
+        using base_type = TaskTime<DTime, int>;
     public:
         explicit LecTime(WeekDay _wday,
                          int _s, int _e) noexcept(false);
 
         // - Note
         //      Calue WeekDay enumeration
-        virtual WeekDay day() const noexcept;
+        WeekDay day() const noexcept;
 
         // - Note
         //      Start Time
         // - Example
         //      1.0 == 10
         //      2.5 == 25
-        virtual int start() const noexcept;
+        //int start() const noexcept;
 
         // - Note
         //      End Time
         // - Example
         //      5.5  == 55
         //      10.5 == 105
-        virtual int end()   const noexcept;
+        //int end()   const noexcept;
 
         // - Note
         //      Lecture length
@@ -63,8 +63,7 @@ namespace project
         //          End   == 40
         //      then
         //          Length == 15
-        virtual int length() const noexcept;
-
+        //int length() const noexcept;
     };
 
     // - Note
@@ -78,12 +77,6 @@ namespace project
     std::ostream& operator<<(std::ostream& _out,
                              const LecTime& _lec)
         noexcept(false);
-
-    // - Note
-    //      Check if 2 lecture collide
-    //      !!! Internal mechanism can be changed later !!!
-    bool do_collide(const LecTime& _lhs,
-                    const LecTime& _rhs) noexcept;
 
 
 }

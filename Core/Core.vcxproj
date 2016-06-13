@@ -128,7 +128,8 @@
     <ClInclude Include="Model\RBTree.h" />
     <ClInclude Include="Stage\Chain.h" />
     <ClInclude Include="Stage\Schedule.h" />
-    <ClInclude Include="Stage\WeeklyPlan.h" />
+    <ClInclude Include="Stage\Time.hpp" />
+    <ClInclude Include="Stage\Plan.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

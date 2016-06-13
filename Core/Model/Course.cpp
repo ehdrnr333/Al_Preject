@@ -5,8 +5,7 @@ using namespace project;
 
 Course::Course(string&& _code,
                int _id, int _point) noexcept(false):
-    code(std::move(_code)),
-    id(_id), point(_point)
+    Plan(std::move(_code), _id), point(_point)
 {
     auto&& check = _id | _point;
     if(check < 0){
@@ -18,23 +17,26 @@ Course::Course(string&& _code,
 
 void Course::addTime(LecTime _lec) noexcept(false)
 {
-    this->v_time.emplace_back(std::move(_lec));
+    this->times.emplace_back(std::move(_lec));
+}
+
+const auto& Course::code() const noexcept {
+    return this->planid();
+}
+
+const auto& Course::id() const noexcept {
+    return this->planjob();
 }
 
 size_t Course::count() const noexcept
 {
-    return this->v_time.size();
+    return this->times.size();
 }
 
-const Vec<LecTime>& Course::times() const noexcept
-{
-    return this->v_time;
-}
-
-const LecTime& Course::operator[](int i)  const
+const LecTime& Course::operator[](size_t i)  const
     noexcept(false)
 {
-    return this->v_time.at(i);
+    return this->times.at(i);
 }
 
 
@@ -47,11 +49,11 @@ std::ostream&
     noexcept(false)
 {
     _out << "{ "
-        << "\"code\" : \"" << _crs.code << "\", "
-        << "\"id\" : \"" << _crs.id << "\", "
+        << "\"code\" : \"" << _crs.code() << "\", "
+        << "\"id\" : \"" << _crs.id() << "\", "
         << "\"point\" : \"" << _crs.point
         << "\"times \" : [";
-    for(const auto& lec : _crs.times()){
+    for(const auto& lec : _crs.times){
         _out << lec;
     }
     _out << "]\" }";

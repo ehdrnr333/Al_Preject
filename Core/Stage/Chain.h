@@ -9,7 +9,7 @@ namespace project
     template <class Elem>
     struct Chain
     {
-        Elem base;
+        Elem       base;
         Deq<Elem>  next;
 
         explicit Chain(const Elem& _base) :
@@ -52,6 +52,20 @@ namespace project
                 }
             });
         }
+
+        // 컨테이너를 받아서 필터링한다.
+        template <class Cont>
+        void filter(const Cont& _cont, int _idx)
+        {
+            for (int i = _idx; i < _cont.size(); i++) {
+                // 충돌이 없으면 추가한다.
+                if (Collide(base, _cont[i]) != true) {
+                    next.push_back(_cont[i]);
+                }
+            }
+        }
+
+
 
         bool operator ==(const Chain& _rhs) const 
             noexcept

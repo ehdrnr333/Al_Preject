@@ -17,6 +17,7 @@
 #define COURSE_H
 
 #include "./LecTime.h"
+#include "../Stage/Plan.hpp"
 
 namespace project
 {
@@ -27,30 +28,29 @@ namespace project
     //      code  : Identification Code for the same courses.
     //      id    : The course's unique number
     //      point : Course Point
-    class Course
+    class Course : 
+        public Plan<string, int32_t, LecTime>
     {
     public:
-        const string     code;    // CSE3031
-        const int32_t    id;      // [ 1, 2 ... ]
         const int32_t    point;   // [ 1, 2 ... ]
-    private: 
-        Vec<LecTime>     v_time;
-    
+
     public: 
         Course(string&& _code,
                int _id, int _point) noexcept(false);
 
         // - Note :
         //      Add lecture time
-        virtual void addTime(LecTime _lec) noexcept(false);
+        void addTime(LecTime _lec) noexcept(false);
+
+        const auto& code() const noexcept;
+
+        const auto& id() const noexcept;
 
         // - Note :
-        //      Lecture count
+        //      Lecture count(== size)
         size_t count() const noexcept;
 
-        const Vec<LecTime>& times() const noexcept;
-
-        const LecTime& operator[](int i)  const
+        const LecTime& operator[](size_t i)  const
             noexcept(false);
 
     };

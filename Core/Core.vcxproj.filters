@@ -53,9 +53,6 @@
     <ClInclude Include="Model\Interpreter.hpp">
       <Filter>Model</Filter>
     </ClInclude>
-    <ClInclude Include="Stage\WeeklyPlan.h">
-      <Filter>Stage</Filter>
-    </ClInclude>
     <ClInclude Include="Stage\Schedule.h">
       <Filter>Stage</Filter>
     </ClInclude>
@@ -67,5 +64,13 @@
     <None Include="README.md">
       <Filter>Others</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Stage\Time.hpp">
+      <Filter>Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage\Plan.hpp">
+      <Filter>Stage</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
