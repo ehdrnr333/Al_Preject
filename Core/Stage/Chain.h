@@ -15,10 +15,10 @@ namespace project
 
         explicit Chain(const Elem& _base) :
             base(_base)
-        {};
+        {}
         explicit Chain(Elem&& _base) :
             base(_base)
-        {};
+        {}
         // Linear 탐색?
         const Elem& at(int i) const
             noexcept(false)
@@ -33,26 +33,6 @@ namespace project
             return next.push_back(_elem);
         }
 
-
-        // 컨테이너를 받아서 필터링한다.
-        template <class InIter, class Pred>
-        void append(const InIter _first, const InIter _last,
-                    Pred _pred)
-        {
-            for (auto it = _first; it != _last; it++) {
-                if (_pred(base, *it) == true) {
-                    this->next.push_back(*it);
-                }
-            }
-        }
-
-        bool operator ==(const Chain& _rhs) const 
-            noexcept
-        {
-            return (base == _rhs.base) 
-                    && (next == _rhs.next);
-        }
-    
     };
 
     template <class E>
