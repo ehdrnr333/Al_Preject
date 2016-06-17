@@ -32,7 +32,9 @@ namespace project
         public Plan<string, int32_t, LecTime>
     {
     public:
-        const int32_t    point;   // [ 1, 2 ... ]
+		using base_type = Plan<string, int32_t, LecTime>;
+	public:
+        int32_t    point;   // [ 1, 2 ... ]
 
     public: 
         Course(string&& _code,
@@ -42,9 +44,9 @@ namespace project
         //      Add lecture time
         void addTime(LecTime _lec) noexcept(false);
 
-        const auto& code() const noexcept;
+        const base_type::id_type& code() const noexcept;
 
-        const auto& id() const noexcept;
+        const base_type::job_type& id() const noexcept;
 
         // - Note :
         //      Lecture count(== size)

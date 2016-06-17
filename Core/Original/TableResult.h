@@ -14,7 +14,7 @@
 #define TABLERESULT_H
 
 #include "SubTable.h"
-#include "Model\CrsTable.hpp"
+#include "../Model/CrsTable.hpp"
 static constexpr int PERIOD_MAX = 136;
 //1~27 28~54 55~81 82~108 109~135
 static constexpr int TABLE_MAX = 15;

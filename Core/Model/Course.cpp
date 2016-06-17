@@ -20,11 +20,17 @@ void Course::addTime(LecTime _lec) noexcept(false)
     this->times.emplace_back(std::move(_lec));
 }
 
-const auto& Course::code() const noexcept {
+const Course::base_type::id_type& 
+	Course::code() const 
+	noexcept 
+{
     return this->planid();
 }
 
-const auto& Course::id() const noexcept {
+const Course::base_type::job_type& 
+	Course::id() const 
+	noexcept 
+{
     return this->planjob();
 }
 

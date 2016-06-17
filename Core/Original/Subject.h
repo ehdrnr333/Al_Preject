@@ -13,7 +13,7 @@
 #ifndef SUBJECT_H
 #define SUBJECT_H
 
-#include "./Model/Course.h"
+#include "../Model/Course.h"
 
 namespace project
 {

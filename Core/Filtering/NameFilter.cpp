@@ -3,56 +3,50 @@
 using namespace std;
 using namespace project;
 
-std::string key(const Course& _crs) {
-	//std::ostringstream sout;
-	//sout << _crs.code() << "-" << _crs.id();
-	//return sout.str();
-	return _crs.code();
-}
 
-int priority(const Course& _crs) {
-	return _crs.point();
-}
-
-
-NameFilter::NameFilter(const vector<Course>& vec)
+NameFilter::NameFilter(const Vec<Course>& vec)
 {
 	original_table = vec;
-
-	//TABLES_COUNT 만큼 Copy
-	for (int i = 0; i < TABLES_COUNT; ++i)
-		tables_copied.emplace_back(vec);
 
 	indexes_choosed.resize(TABLES_COUNT);
 
 	//시간표 정보 삽입(first : index, second : priority)
 	for (int i = 0; i < vec.size(); ++i) {
-		auto K = key(vec[i]);
-		auto Pri = priority(vec[i]);
-			course_sets[K].push_back(
-				pair<int, int>(i, Pri));
+		string K = vec[i].code();
+		auto Pri = static_cast<int>(vec[i].point);
+		course_sets[K].push_back(
+			pair<int, int>(i, Pri));
 	}
 
-	//Priority를 TABLES_COUNT만큼 정규화
+	int prime_candidate = 3;
+
+	while (prime_table.size() != course_sets.size()){
+		if (isPrime(prime_candidate))
+			prime_table.emplace_back(prime_candidate);
+		
+		prime_candidate++;
+	}
+
 	for (auto& set : course_sets) {
 		sort_courses(set.second);
+	}
+	
+	for (auto& set : course_sets) {
+		if (set.second.size() >= TABLES_COUNT ||
+			set.second.at(0).second == 0)
+			continue;
 		priority_normalization(set.second);
+	}
+
+	for (auto& set : course_sets) {
 		distribute_course_index(set.second);
 	}
-	
 }
 
-vector<vector<Course>>& NameFilter::get_result()
+Vec<Vec<Course>>& NameFilter::get_result()
 {
-	auto& chosed = indexes_choosed;
-	//인덱스 출력용
-	for (auto a : chosed) {
-		for (auto b : a){
-			cout << b << " ";
-		}
-		cout << endl;
-	}
 	
+	auto& chosed = indexes_choosed;
 	
 	//중복성 제거
 	for (int i = 0; i < chosed.size(); ++i) {
@@ -81,6 +75,8 @@ vector<vector<Course>>& NameFilter::get_result()
 	for (int i = 0; i < indexes_choosed.size(); ++i) {
 
 		for (auto a : indexes_choosed[i]) {
+			if (a < 0)
+				continue;
 			auto&& current_crs = original_table[a];
 			tables_filtered[i].emplace_back(current_crs);
 		}
@@ -92,7 +88,7 @@ vector<vector<Course>>& NameFilter::get_result()
 
 // Insertion sort for priority(Insertion sort)
 void NameFilter::sort_courses(
-	vector<pair<int, int>>& set)
+	Vec<pair<int, int>>& set)
 {
 	auto j = 0;
 
@@ -108,7 +104,7 @@ void NameFilter::sort_courses(
 
 // Normalization priority is changed to count
 void NameFilter::priority_normalization(
-	vector<pair<int, int>>& set)
+	Vec<pair<int, int>>& set)
 {
 	int total = 0;
 	int check = 0;
@@ -142,20 +138,20 @@ void NameFilter::priority_normalization(
 //골라야하는 한 시간표 영역에 대하여 
 //고르게 시간표 case를 가중치에 맞게 분배해준다.
 void NameFilter::distribute_course_index(
-	vector<pair<int, int>>& set)
+	Vec<pair<int, int>>& set)
 {
+	
 	for (int i = 0; i < TABLES_COUNT; ++i)
 		indexes_choosed[i].emplace_back(VACANT);
 
 	for (auto p : set) {
 
-		auto count = p.second;
-		auto interval = TABLES_COUNT / 
-						count + pow(count, start_index);
-		auto input_index = start_index;
+		auto count = abs(p.second);
+		auto interval = prime_table[start_index];
+		auto input_index = 0;
 
 		while(count != 0){
-
+			
 			input_index += interval;
 			input_index %= TABLES_COUNT;
 
@@ -166,11 +162,14 @@ void NameFilter::distribute_course_index(
 				--count;
 			}
 			else {
-				//빈 공간을 찾을 때 까지 한 칸씩 이동
-				while (!(indexes_choosed[input_index].at
-								(start_index) == VACANT)) {
+
+				//빈 공간을 찾을 때 까지 한 칸씩 이동 
+				while (!(indexes_choosed[input_index].at(start_index) 
+					== VACANT)) {
+
 					input_index += 1;
 					input_index %= TABLES_COUNT;
+
 				}
 
 				indexes_choosed[input_index].at
@@ -182,4 +181,17 @@ void NameFilter::distribute_course_index(
 	}
 
 	++start_index;
+}
+
+bool NameFilter::isPrime(const int& num) {
+	
+	if (num == 0)
+		return true;
+
+	for (int i = 2; i <= sqrt(num); i++)
+		if (num % i == 0)
+			return false;
+	
+	return true;
+
 }
