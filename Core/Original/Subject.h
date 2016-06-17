@@ -1,34 +1,31 @@
 // ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 //
 //  File     : Subject.h
-//  Updated  : 16/06/10
+//  Updated  : 16/06/17
 //  Author
-//      양 동국 ( ehdrnr333@naver.com )
+//      DongGuk Yang ( ehdrnr333@naver.com )
 //  Note
-//      학수번호가 같은 Course의 목록
+//      class Subject : contain same code Courses
 //
 //  Task
-//
+//      Subject constructor
 // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 #ifndef SUBJECT_H
 #define SUBJECT_H
 
-#include "./Model/Course.h"
+#include "../Model/Course.h"
 
 namespace project
 {
-
 	// - Note
-	//      Subject class
-	//
+	//      class Subject : contain same code Courses
 	class Subject
 	{
-	private: // ---- ---- Variable ---- ----
-	public: // ---- ---- Default ---- ----
+	public:  // ---- ---- all member ---- ----
 		std::vector<Course> crs_list;
 		string          code;
 
-		Subject(Course _c);
+		Subject(Course& _c);
 	};
 } // namespace project
 #endif 

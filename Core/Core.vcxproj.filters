@@ -27,6 +27,9 @@
     <ClCompile Include="Original\TableResult.cpp">
       <Filter>Original</Filter>
     </ClCompile>
+    <ClCompile Include="DongGuk_Test.cpp">
+      <Filter>Original</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
@@ -43,9 +46,6 @@
       <Filter>Model</Filter>
     </ClInclude>
     <ClInclude Include="Model\LecTime.h">
-      <Filter>Model</Filter>
-    </ClInclude>
-    <ClInclude Include="Model\RBTree.h">
       <Filter>Model</Filter>
     </ClInclude>
     <ClInclude Include="Stage\Chain.h">
@@ -67,6 +67,9 @@
       <Filter>Original</Filter>
     </ClInclude>
     <ClInclude Include="Original\TableResult.h">
+      <Filter>Original</Filter>
+    </ClInclude>
+    <ClInclude Include="DongGuk_Test.h">
       <Filter>Original</Filter>
     </ClInclude>
   </ItemGroup>

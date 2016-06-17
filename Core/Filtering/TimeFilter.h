@@ -1,6 +1,6 @@
 #ifndef TIME_FILTER_H
 #define TINE_FILTER_H
-#include "Course.h"
+#include "../Model/Course.h"
 #include "../Base.h"
 #include "TimeFlag.h"	
 
