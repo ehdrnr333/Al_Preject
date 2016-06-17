@@ -1,7 +1,7 @@
 ﻿// ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 //
 //  File     : Base.h
-//  Updated  : 16/06/04
+//  Updated  : 16/06/17
 //  Author
 //      Park Dong-Ha ( luncliff@gmail.com )
 //  Note
@@ -34,6 +34,9 @@
 
 #include <algorithm>
 #include <iterator>
+#include <functional>
+
+#include <atomic>
 
 #include <exception>
 #include <stdexcept>

@@ -1,14 +1,16 @@
 ﻿// ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 //
-//  File     : CourseInterpreter.h
+//  File     : Interpreter.hpp
 //  Updated  : 16/06/04
 //  Author
 //      Park Dong-Ha ( luncliff@gmail.com )
 //  Note
 //      Interpreter to parse Text stream into Course objects
-//
+//      
 //  Task
-//
+//      현재 Course의 해석은 고정된 CSV 포맷에만 맞도록 
+//      되어 있으며, 형식적인 Template 클래스 처리가 되어있다.
+// 
 // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 #ifndef INTERPRETER_H
 #define INTERPRETER_H
@@ -78,8 +80,6 @@ namespace project
 
     };
 
-    // Interpreter Function Definitions
-    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 
     // - Note
     //      Get the [code] and [id]
@@ -329,9 +329,6 @@ namespace project
         // Return the vector
         return tokens;
     }
-
-
-
 
 
 } // namespace project

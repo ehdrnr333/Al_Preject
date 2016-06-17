@@ -14,8 +14,8 @@
 // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 #ifndef LECTIME_H
 #define LECTIME_H
-#include "../Stage/Time.hpp"
 #include "./Day.h"
+#include "../Stage.h"
 
 namespace project
 {

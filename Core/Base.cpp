@@ -9,7 +9,6 @@ using namespace project;
 std::istream& project::skip_line(std::istream& _in)
     noexcept(false)
 {
-    _in.ignore(std::numeric_limits<std::streamsize>::max(),
-               '\n');
+    _in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     return _in;
 }

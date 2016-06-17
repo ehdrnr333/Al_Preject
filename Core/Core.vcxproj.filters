@@ -12,10 +12,10 @@
     <ClCompile Include="Model\LecTime.cpp">
       <Filter>Model</Filter>
     </ClCompile>
-    <ClCompile Include="Stage\stage_test.cpp">
-      <Filter>Stage</Filter>
-    </ClCompile>
     <ClCompile Include="Test\io_test.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\stage_test.cpp">
       <Filter>Test</Filter>
     </ClCompile>
   </ItemGroup>
@@ -36,19 +36,15 @@
     <ClInclude Include="Model\LecTime.h">
       <Filter>Model</Filter>
     </ClInclude>
-    <ClInclude Include="Model\RBTree.h">
-      <Filter>Model</Filter>
-    </ClInclude>
-    <ClInclude Include="Stage\Chain.h">
-      <Filter>Stage</Filter>
-    </ClInclude>
     <ClInclude Include="Stage\Plan.hpp">
       <Filter>Stage</Filter>
     </ClInclude>
-    <ClInclude Include="Stage\Schedule.h">
+    <ClInclude Include="Stage\Time.hpp">
       <Filter>Stage</Filter>
     </ClInclude>
-    <ClInclude Include="Stage\Time.hpp">
+    <ClInclude Include="Stage.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="Stage\Chain.hpp">
       <Filter>Stage</Filter>
     </ClInclude>
   </ItemGroup>

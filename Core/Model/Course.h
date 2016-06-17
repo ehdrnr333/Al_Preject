@@ -1,7 +1,7 @@
 ﻿// ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 //
 //  File     : Course.h
-//  Updated  : 16/06/04
+//  Updated  : 16/06/17
 //  Author
 //      Park Dong-Ha ( luncliff@gmail.com )
 //  Note
@@ -17,7 +17,7 @@
 #define COURSE_H
 
 #include "./LecTime.h"
-#include "../Stage/Plan.hpp"
+#include "../Stage.h"
 
 namespace project
 {
