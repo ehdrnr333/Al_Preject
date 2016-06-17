@@ -20,11 +20,11 @@ void Course::addTime(LecTime _lec) noexcept(false)
     this->times.emplace_back(std::move(_lec));
 }
 
-const auto& Course::code() const noexcept {
+const Course::code_type& Course::code() const noexcept {
     return this->planid();
 }
 
-const auto& Course::id() const noexcept {
+const Course::id_type& Course::id() const noexcept {
     return this->planjob();
 }
 
@@ -51,7 +51,7 @@ std::ostream&
     _out << "{ "
         << "\"code\" : \"" << _crs.code() << "\", "
         << "\"id\" : \"" << _crs.id() << "\", "
-        << "\"point\" : \"" << _crs.point
+        << "\"point\" : \"" << _crs.point << "\", "
         << "\"times \" : [";
     for(const auto& lec : _crs.times){
         _out << lec;

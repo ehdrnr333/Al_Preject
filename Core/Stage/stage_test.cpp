@@ -76,7 +76,7 @@ int planner(void)
         int idx = idxmap[plan.planid()];
 
         // Filter the vector from the given index
-        ch.filter(plans, idx);
+        //ch.filter(plans, idx);
         chains.emplace_back(std::move(ch));
     }
 

@@ -18,15 +18,6 @@
     <ClCompile Include="Test\io_test.cpp">
       <Filter>Test</Filter>
     </ClCompile>
-    <ClCompile Include="Original\Subject.cpp">
-      <Filter>Original</Filter>
-    </ClCompile>
-    <ClCompile Include="Original\SubTable.cpp">
-      <Filter>Original</Filter>
-    </ClCompile>
-    <ClCompile Include="Original\TableResult.cpp">
-      <Filter>Original</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
@@ -60,15 +51,6 @@
     <ClInclude Include="Stage\Time.hpp">
       <Filter>Stage</Filter>
     </ClInclude>
-    <ClInclude Include="Original\Subject.h">
-      <Filter>Original</Filter>
-    </ClInclude>
-    <ClInclude Include="Original\SubTable.h">
-      <Filter>Original</Filter>
-    </ClInclude>
-    <ClInclude Include="Original\TableResult.h">
-      <Filter>Original</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
@@ -79,9 +61,6 @@
     </Filter>
     <Filter Include="Stage">
       <UniqueIdentifier>{1b1a7568-5d36-4aab-9019-3316da3d15d5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Original">
-      <UniqueIdentifier>{c9761113-ba22-43d5-8a1f-2e4f9919971e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Test">
       <UniqueIdentifier>{b3f5ecc8-42a7-4157-b4c0-9ce54b29da93}</UniqueIdentifier>
