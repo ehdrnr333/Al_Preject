@@ -30,10 +30,15 @@ namespace project
 
             // For next courses...
             for (size_t j = idx + 1; j < CrsList.size(); ++j) {
-                // if both course don't collide, insert to chain
-                if (Collide(CrsList[idx], CrsList[j]) == false) {
-                    tmp.append(j);
+                // Time collision
+                // && Same code
+                if ((Collide(CrsList[idx], CrsList[j]) == true)
+                        && (CrsList[idx].code() == CrsList[j].code()))
+                {
+                    continue;
                 }
+                // if both course don't collide, insert to chain
+                tmp.append(j);
             }
 
             // move the chain to chain vector('chains')
@@ -46,15 +51,33 @@ namespace project
     // - Note
     //      Stage 알고리즘의 구현
     // 
+    //      The algorithm starts with sorted CourseList
     //      course를 Template argument로 사용하였을 경우
     //      공간 비용이 큰 점을 고려하여
     //      CrsList를 기준으로 한 index방식을 사용하였다.
     Deq<CrsSchedule> 
-        stage_schedule(const Vec<Course>& _CrsList, Predicate pred, 
-                       const int max_stage = 10)
+        stage_schedule(Vec<Course>& _CrsList,
+                       Predicate pred,
+                       const int max_stage)
     {
-        // Meta data construction
+
+        // 1. 모든 Course들을
+        //    첫번째(0) 수업시간(LecTime)을 기준으로 정렬한다.
+        std::sort(_CrsList.begin(), _CrsList.end(),
+            [](const Course& _lhs, const Course& _rhs) -> bool
+        {
+            return _lhs[0].start() < _rhs[0].start();
+        });
+
+
+
+        // 2. Build Chains
+        //
+        //    In the case, CrsChain represents...
+        //      base : specific course
+        //      next : every course which can be placed after 'base' course.
         Vec<CrsChain> chains = MakeChains(_CrsList);
+
 
         // 이전 Stage 큐. CrsList의 Index 기반
         // 다음 Stage 큐. CrsList의 Index 기반
@@ -63,11 +86,10 @@ namespace project
         Deq<CrsSchedule> DoneQue;
 
         // Stage Counter
-        int stage{ 0 };
+        int stage{ 1 };
 
-        // Stage 0 :
-        //      최초 강좌(Course)의 index를 삽입.
-        //      idx == 1 은 plans[1]에 해당하는 course를 의미한다.
+        // 3. 최초 강좌(Course)의 index를 삽입.
+        //    ex) idx == 1 은 plans[1]에 해당하는 course를 의미한다.
         for (size_t idx = 0; idx < _CrsList.size(); idx++) {
             Deq<int> sched{};
             sched.emplace_back(idx);
@@ -118,23 +140,17 @@ namespace project
                     // 기존의 수업들과 Collision 비교
                     for (const int i : schedule) {
                         // 충돌할 경우 Flag를 set하고 break
-                        if (Collide(_CrsList[i], _CrsList[anthr]) == true) {
+                        if ((Collide(_CrsList[i], _CrsList[anthr]) == true)
+                            || (_CrsList[i].code() == _CrsList[anthr].code()))
+                        {
                             flag.store(true);
                             break;
                         }
                     }
 
-                    // 시간 충돌이 존재하면, 확장 불가능.
-                    // 조건이 맞을 경우 DoneQue에 삽입한다.
-                    if (flag.load()) {
-                        CrsSchedule sch{};
-                        for (int i : schedule) {
-                            sch.append(_CrsList[i]);
-                        }
 
-                        if (pred(sch)) {
-                            DoneQue.emplace_back(std::move(sch));
-                        }
+                    // 시간 충돌이 존재하면, 확장 불가능.
+                    if (flag.load()) {
                         continue;
                     }
                     else {
@@ -153,11 +169,13 @@ namespace project
                 }
             }
 
+            /*
             std::cout << "Stage : " << stage << std::endl;
             std::cout << "Prev : " << PrevQue.size() << std::endl;
             std::cout << "Next : " << NextQue.size() << std::endl;
             std::cout << "Done : " << DoneQue.size() << std::endl
                 << std::endl;
+            */
             stage += 1;
 
             // 일정 Stage를 넘어가면 중지한다.
@@ -178,21 +196,22 @@ namespace project
 
     // - Note :
     //      Staging algorithm
-    int stage_test(const std::string _ipath, const std::string _opath)
+    int stage_test(const std::string _ipath,
+                   const std::string _opath,
+                   int max)
     {
-        // 0-0. Open the CSV file
+        // 0. Open the CSV file
         // ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
         std::ifstream fin{ _ipath, std::ios_base::in };
 
-        // 0-1. Interpret the file into Course vector
+        // 0. Interpret the file into Course vector
         //      >> 'EveryCourse'
         // ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
         Vec<Course> EveryCourse;       // Course vector
         Interpreter<Course> IL{ fin }; // Interpreter for Course
 
-        EveryCourse.reserve(2000);
 
-        // 0-2. Interpret file stream into Course vector
+        // 0. Interpret file stream into Course vector
         // ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 
         // Skip the first line (CSV headings)
@@ -213,32 +232,28 @@ namespace project
 
 
         // ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
-
-        // 모든 Course들을 
-        // 첫번째 수업시간(LecTime)을 기준으로 정렬한다.
-        std::sort(EveryCourse.begin(), EveryCourse.end(),
-            [](const Course& _lhs, const Course& _rhs) -> bool
-        {
-            return _lhs[0].start() < _rhs[0].start();
-        });
+        // Stage Algorithm section
+        // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 
         // 필터링 함수
-        Predicate filter = [](const CrsSchedule& _tbl)->bool
+        Predicate filter = [=](const CrsSchedule& _tbl)->bool
         {
-            return _tbl.size() == 4;
+            // allow if the Course Table size is equal to max
+            return _tbl.size() == max;
         };
 
-        // DoneQue는 
-        //      10회만큼 staging한 결과를 
-        //      filter함수로 걸러낸 것이다.
-        auto DoneQue = stage_schedule(EveryCourse, filter, 10);
+        // DoneQue는
+        //    max회만큼 staging한 결과를 filter함수로 걸러낸 것이다.
+        auto DoneQue = stage_schedule(EveryCourse, filter, max);
 
 
         // ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
+        std::cout << "Staging Done : "
+                  << DoneQue.size() << " Table... " << std::endl;
 
-        std::cout << "Staging Done!" << std::endl;
 
-        std::ofstream fout{ _opath, std::ios_base::out | std::ios_base::trunc };
+        std::ofstream fout{ _opath,
+                            std::ios_base::out | std::ios_base::trunc };
 
         for (auto& schedule : DoneQue) {
             fout << schedule << std::endl;
@@ -248,13 +263,13 @@ namespace project
     }
 }
 
-//int main(int argc, char* argv[]) {
-//
-//    try {
-//        //return project::stage_test("./u8Test.txt", "./u8Result.txt");
-//        return project::stage_test(argv[1], argv[2]);
-//    }
-//    catch (...) {
-//        return EXIT_FAILURE;
-//    }
-//}
+int main(int argc, char* argv[]) {
+    try {
+        int stage = atoi(argv[3]);
+        //return project::stage_test("./u8Test.txt", "./u8Result.txt", 5);
+        return project::stage_test(argv[1], argv[2], stage);
+    }
+    catch (...) {
+        return EXIT_FAILURE;
+    }
+}

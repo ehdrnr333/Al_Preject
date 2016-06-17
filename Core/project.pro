@@ -1,5 +1,5 @@
 TEMPLATE = app
-CONFIG += console c++14 thread debug
+CONFIG += console c++14 thread release # debug
 CONFIG -= app_bundle
 CONFIG -= qt
 
