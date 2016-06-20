@@ -18,7 +18,6 @@
 
 namespace project
 {
-
     // - Note :
     //      Table of `Course`.
     //      the template class can support various Course types.

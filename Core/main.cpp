@@ -94,21 +94,6 @@ int main(int argc, char* argv[])
         // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 
 
-
-
-
-
-
-
-        std::ofstream fout{ opath,
-            std::ios_base::out | std::ios_base::trunc };
-
-        //for (auto& schedule : DoneQue) {
-        //    fout << schedule << std::endl;
-        //}
-
-
-        return EXIT_SUCCESS;
     }
     catch (...) {
         return EXIT_FAILURE;

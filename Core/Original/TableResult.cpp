@@ -1,25 +1,25 @@
 #include "TableResult.h"
 using namespace project;
 
-// TableResult 객체 초기화
+// constructor : Initialization TableResult based on the Course list
 TableResult::TableResult(CrsTable<Course> _ctb)
 {
-	map.resize(PERIOD_MAX);
 	for (auto crs : _ctb) {
 		calList.addCrs(crs);
 	}
 	execute.resize(calList.sub_list.size());
 }
-
-// 해당 시간에 위치한 맵의 인덱스 구하기
+// Converting time information in the index
 int TableResult::get_idx(const int& _i, const int& _w)
 {
-	return (_i / 5 - 1) + ((_w-1) * 27);
-}
+	return (_i / 5 - 1) + ((_w - 1) * 27);
+};
 
-// 시간표 결과목록을 만드는 절차
+// CreateTableList : All procedures that produce a timetable
 void TableResult::CreateTableList()
 {
+	std::cout << "# Operation Start" << std::endl;
+	int i = 0;
 	while (true)
 	{
 		CreateTable();
@@ -27,12 +27,13 @@ void TableResult::CreateTableList()
 			break;
 		NextExecute();
 	}
+	std::cout << "# Operation End" << std::endl;
 }
 
-// 하나의 시간표를 생성
+// CreateTable  : Produce one timetable
 void TableResult::CreateTable()
 {
-	ArrInit();
+	bmap.reset();
 	CrsTable<Course> ctb;
 
 	for (int i = 0; i<calList.sub_list.size(); ++i)
@@ -40,7 +41,7 @@ void TableResult::CreateTable()
 		Course crs = calList.sub_list[i].crs_list[execute[i]];
 		if (execute[i]>0 && TimeCal(crs))
 		{
-			ctb.crs_list.push_back(crs);
+			ctb.append(crs);
 		}
 	}
 	if (OverloadCheck(ctb))
@@ -55,43 +56,36 @@ void TableResult::CreateTable()
 	}
 }
 
-// 배열 초기화 작업
-void TableResult::ArrInit()
-{
-	for (int i = 0; i < PERIOD_MAX; ++i)
-		map[i] = false;
-}
-
-// 시간이 맵에 적절히 위치하는 지 확인하는 함수
+// TimeCal  : Check course can put in timetable
 bool TableResult::TimeCal(const Course& _course)
 {
 	int s;
-	for (int i = 0; i<_course.lectures().size(); ++i)
+	for (int i = 0; i<_course.times.size(); ++i)
 	{
-		s = get_idx(_course.lectures().at(i).start(), _course.lectures().at(i).day());
-		while (s < get_idx(_course.lectures().at(i).end(), _course.lectures().at(i).day()))
+		s = get_idx(_course.times[i].start().clock, _course.times[i].day());
+		while (s < get_idx(_course.times[i].end().clock, _course.times[i].day()))
 		{
-			if (map[s] == false)
+			if (!bmap[s])
 			{
-				map[s] = true; 
+				bmap.set(s);
 				++s;
 			}
 			else
 			{
 				--s;
-				while (s > get_idx(_course.lectures().at(i).start(), _course.lectures().at(i).day()) - 1)
+				while (s > get_idx(_course.times[i].start().clock, _course.times[i].day()) - 1)
 				{
-					map[s] = false;
+					bmap.reset(s);
 					--s;
 				}
 				if (i != 0)
 				{
 					for (int j = i - 1; j >= 0; --j)
 					{
-						s = get_idx(_course.lectures().at(i).end(), _course.lectures().at(i).day()) - 1;
-						while (s > (get_idx(_course.lectures().at(i).start(), _course.lectures().at(i).day()) - 1))
+						s = get_idx(_course.times[i].end().clock, _course.times[i].day()) - 1;
+						while (s > (get_idx(_course.times[i].start().clock, _course.times[i].day()) - 1))
 						{
-							map[s] = false;
+							bmap.reset(s);
 							--s;
 						}
 					}
@@ -101,7 +95,7 @@ bool TableResult::TimeCal(const Course& _course)
 	}return true;
 }
 
-// 시간표 개수가 초과하지 않도록 제어하는 함수
+// Function to check if the results do not exceed
 bool TableResult::OverloadCheck(const CrsTable<Course>& _ctb)
 {
 	if (table_list.size() < TABLE_MAX)
@@ -114,7 +108,7 @@ bool TableResult::OverloadCheck(const CrsTable<Course>& _ctb)
 	return false;
 }
 
-// 모든 경우의 수를 조사했는지 확인하는 함수
+// Check if all case have investigated
 bool TableResult::ExecuteMaxCheck()
 {
 	for (int i = 0; i<execute.size(); ++i)
@@ -124,7 +118,7 @@ bool TableResult::ExecuteMaxCheck()
 	}
 	return true;
 }
-// 다음 진행 경우의 수로 이동
+// Function for the next operation
 void TableResult::NextExecute()
 {
 	int count = calList.sub_list.size() - 1;

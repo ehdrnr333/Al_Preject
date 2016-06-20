@@ -30,6 +30,8 @@ namespace project
     class Course : 
         public Plan<string, int32_t, LecTime>
     {
+	public:
+		using base_type = Plan<string, int32_t, LecTime>;
     public:
         using base_type = Plan<string, int32_t, LecTime>;
         using code_type = base_type::id_type;

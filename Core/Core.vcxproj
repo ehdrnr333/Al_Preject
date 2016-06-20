@@ -111,6 +111,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Base.cpp" />
+    <ClCompile Include="DongGuk_Test.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model\Course.cpp" />
     <ClCompile Include="Model\Day.cpp" />
@@ -127,9 +128,13 @@
     <ClInclude Include="Model\Interpreter.hpp" />
     <ClInclude Include="Model\LecTime.h" />
     <ClInclude Include="Stage.h" />
-    <ClInclude Include="Stage\Chain.hpp" />
     <ClInclude Include="Stage\Time.hpp" />
     <ClInclude Include="Stage\Plan.hpp" />
+    <ClInclude Include="Stage\Chain.hpp" />
+    <ClInclude Include="DongGuk_Test.h" />
+    <ClInclude Include="Original\Subject.h" />
+    <ClInclude Include="Original\SubTable.h" />
+    <ClInclude Include="Original\TableResult.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

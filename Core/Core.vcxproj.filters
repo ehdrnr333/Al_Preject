@@ -18,6 +18,9 @@
     <ClCompile Include="Test\stage_test.cpp">
       <Filter>Test</Filter>
     </ClCompile>
+    <ClCompile Include="DongGuk_Test.cpp">
+      <Filter>Original</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
@@ -36,6 +39,9 @@
     <ClInclude Include="Model\LecTime.h">
       <Filter>Model</Filter>
     </ClInclude>
+    <ClInclude Include="Stage\Chain.h">
+      <Filter>Stage</Filter>
+    </ClInclude>
     <ClInclude Include="Stage\Plan.hpp">
       <Filter>Stage</Filter>
     </ClInclude>
@@ -46,6 +52,9 @@
     <ClInclude Include="Model.h" />
     <ClInclude Include="Stage\Chain.hpp">
       <Filter>Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="DongGuk_Test.h">
+      <Filter>Original</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
