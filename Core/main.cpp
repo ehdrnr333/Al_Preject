@@ -1,5 +1,7 @@
 ﻿#include <chrono>
 #include "./Stage.h"
+#include "./Original.h"
+#include "./Filtering.h"
 
 using namespace std;
 using namespace std::chrono;
@@ -14,7 +16,6 @@ std::chrono::steady_clock::time_point tm_stamp() {
 int main(int argc, char* argv[]) 
 {
     try {
-
         std::string ipath = argv[1];
         std::string opath = argv[2];
 
@@ -56,11 +57,71 @@ int main(int argc, char* argv[])
 
 
 
+        // ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
+        // Original Algorithm
+        // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+        
+        // Algorithm 시작...
+        auto org_start = tm_stamp();
+
+        // Initiate TableResult Instance
+        TableResult tr(EveryCourse);
+        std::cout << "# Operating Instance Create Complete" << std::endl;
+        // Calcuate Course's time and Create TimeTable
+        tr.CreateTableList();
+
+        //// Write text file
+        //for (int i = 0; i < tr.table_list.size(); ++i)
+        //{
+        //    fout << "Rank " << i << " Table" << std::endl;
+        //    fout << tr.table_list[i] << std::endl;
+        //}
+        //std::cout << "# Print Complete" << std::endl;
 
         // ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
-        // Stage Algorithm section
+        // Report : [Original]
         // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+
+        // Original Algorirthm이 소모한 시간
+        auto org_time = duration_cast<milliseconds>(
+            tm_stamp() - org_start);
+        std::cout << org_time.count() << "ms" << std::endl;
+        // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+
+
+
+
+        // ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
+        // Filtering Algorithm
+        // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+
+        // Algorithm 시작...
+        auto fil_start = tm_stamp();
+
+        // ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
+        // Report : [Filtering]
+        // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+
+        // Filtering Algorirthm이 소모한 시간
+        auto fil_time = duration_cast<milliseconds>(
+                                tm_stamp() - fil_start);
+        std::cout << fil_time.count() << "ms" << std::endl;
+
+
+        // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+
+
+
+
+
+
+        // ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
+        // Stage Algorithm
+        // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+
+        // 최소 Course 제한 : 7개 수업 이상
         auto min_course = 7;
+        // 최대 Stage 진행은 12단계까지.
         auto max_stage = 12;
 
         // Stage Algorithm 시작...
@@ -88,14 +149,17 @@ int main(int argc, char* argv[])
                                      tm_stamp() - stg_start);
         std::cout << stg_time.count() << "ms" << std::endl;
 
-        std::cout << "Staging Done : "
-            << DoneQue.size() << " Table... " << std::endl;
+        //std::cout << "Staging Done : "
+        //    << DoneQue.size() << " Table... " << std::endl;
+        // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 
-        // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+
 
 
     }
-    catch (...) {
+    catch (std::exception& ex) {
+        std::cerr << "[ Exception Confirmed ]" << std::endl;
+        std::cerr << ex.what() << std::endl;
         return EXIT_FAILURE;
     }
 }

@@ -1,4 +1,4 @@
-#ifndef NAME_FILTER_H 
+ï»¿#ifndef NAME_FILTER_H 
 #define NAME_FILTER_H
 
 #include "../Base.h"
@@ -9,12 +9,17 @@ namespace project
 {
 	class NameFilter {
 	private:
-		std::vector<Course> original_table; //¿øº» ½Ã°£Ç¥
-		std::vector<std::vector<Course>> tables_copied; //¿øº» ½Ã°£Ç¥¸¦ º¹»çÇÑ °ª
-		std::map<std::string, std::vector<std::pair<int, int>>> course_sets; //µ¿ÀÏÇÑ ÀÌ¸§ º°·Î ¹­Àº Á¤º¸µé(string : ¼ö¾÷ ÀÌ¸§, key : ºĞ¹è °³¼ö, value : ÇØ´ç ¼ö¾÷ ÀÎµ¦½º)
+        //ì›ë³¸ ì‹œê°„í‘œ
+		Vec<Course> original_table; 
+        //ì›ë³¸ ì‹œê°„í‘œë¥¼ ë³µì‚¬í•œ ê°’
+		Vec<Vec<Course>> tables_copied; 
+        //ë™ì¼í•œ ì´ë¦„ ë³„ë¡œ ë¬¶ì€ ì •ë³´ë“¤(string : ìˆ˜ì—… ì´ë¦„, key : ë¶„ë°° ê°œìˆ˜, value : í•´ë‹¹ ìˆ˜ì—… ì¸ë±ìŠ¤)
+		std::map<std::string, Vec<std::pair<int, int>>> course_sets; 
 
-		std::vector<std::vector<int>> indexes_choosed; //º¤ÅÍ ³»ÀÇ º¤ÅÍ : ¼±ÅÃµÈ ÀÎµ¦½º ¹øÈ£µé 
-		std::vector<std::vector<Course>> tables_filtered; //ÇÊÅÍ¸µ µÈ ½Ã°£Ç¥µé
+        //ë²¡í„° ë‚´ì˜ ë²¡í„° : ì„ íƒëœ ì¸ë±ìŠ¤ ë²ˆí˜¸ë“¤ 
+		Vec<Vec<int>> indexes_choosed; 
+        //í•„í„°ë§ ëœ ì‹œê°„í‘œë“¤
+		Vec<Vec<Course>> tables_filtered; 
 
 		int start_index = 0;
 
@@ -22,12 +27,12 @@ namespace project
 		const int VACANT = -1;
 
 	public:
-		NameFilter(const std::vector<Course>& vec);
-		std::vector<std::vector<Course>>& get_result();
+		NameFilter(const Vec<Course>& vec);
+		Vec<Vec<Course>>& get_result();
 	private:
-		void sort_courses(std::vector<std::pair<int, int>>& set);
-		void priority_normalization(std::vector<std::pair<int, int>>& set);
-		void distribute_course_index(std::vector<std::pair<int, int>>& set);
+		void sort_courses(Vec<std::pair<int, int>>& set);
+		void priority_normalization(Vec<std::pair<int, int>>& set);
+		void distribute_course_index(Vec<std::pair<int, int>>& set);
 	};
 
 }

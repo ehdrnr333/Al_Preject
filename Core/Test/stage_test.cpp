@@ -1,4 +1,11 @@
 ﻿// ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
+// 
+//  File     : stage_test.cpp
+//  Author   : Park Dong-Ha ( luncliff@gmail.com )
+//  Updated  : 16/06/19
+//  Note
+//      Stage Algorithm 관련 함수들의 구현
+//
 // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 //#include "../Model.h"
 #include "../Stage.h"
@@ -11,7 +18,7 @@ using project::Course;
 //      Course List를 기반으로 Chain의 목록을 만든다
 // - Expected Input
 //      CrsList : 임의의 기준으로 정렬된 Course의 리스트
-Vec<CrsChain> project::MakeChains(const Vec<project::Course>& CrsList)
+Vec<CrsChain> project::MakeChains(const Vec<Course>& CrsList)
 {
     // 반환을 위한 Chains
     Vec<CrsChain> chains{}; 
@@ -49,7 +56,7 @@ Vec<CrsChain> project::MakeChains(const Vec<project::Course>& CrsList)
 //      공간 비용이 큰 점을 고려하여
 //      CrsList를 기준으로 한 index방식을 사용하였다.
 Deq<CrsSchedule> 
-    project::stage_schedule(Vec<Course>& _CrsList, const int max_stage,
+    project::stage_schedule(Vec<Course> _CrsList, const int max_stage,
                             std::function<bool(const Deq<int>&)> filter)
 {
 

@@ -19,7 +19,7 @@
 #include <bitset>
 
 #include "SubTable.h"
-#include "../Model/CrsTable.hpp"
+#include "../Model.h"
 static constexpr int PERIOD_MAX = 136;
 // week index : 1~27 28~54 55~81 82~108 109~135
 static constexpr int TABLE_MAX = 15;
@@ -38,7 +38,7 @@ namespace project
 		std::vector<CrsTable<Course>> table_list;
 
 		// Constructor
-		TableResult(CrsTable<Course> _ctb);
+		explicit TableResult(Vec<Course> _ctb);
 		// Converting time information in the index
 		int get_idx(const int& _i, const int& _w);
 

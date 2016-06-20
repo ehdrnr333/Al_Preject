@@ -1,4 +1,4 @@
-#include "NameFilter.h"	
+#include "./NameFilter.h"	
 
 using namespace std;
 using namespace project;
@@ -11,21 +11,21 @@ std::string key(const Course& _crs) {
 }
 
 int priority(const Course& _crs) {
-	return _crs.point();
+	return _crs.point;
 }
 
 
-NameFilter::NameFilter(const vector<Course>& vec)
+NameFilter::NameFilter(const Vec<Course>& vec)
 {
 	original_table = vec;
 
-	//TABLES_COUNT ¸¸Å­ Copy
+	//TABLES_COUNT ï¿½ï¿½Å­ Copy
 	for (int i = 0; i < TABLES_COUNT; ++i)
 		tables_copied.emplace_back(vec);
 
 	indexes_choosed.resize(TABLES_COUNT);
 
-	//½Ã°£Ç¥ Á¤º¸ »ðÀÔ(first : index, second : priority)
+	//ï¿½Ã°ï¿½Ç¥ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(first : index, second : priority)
 	for (int i = 0; i < vec.size(); ++i) {
 		auto K = key(vec[i]);
 		auto Pri = priority(vec[i]);
@@ -33,7 +33,7 @@ NameFilter::NameFilter(const vector<Course>& vec)
 				pair<int, int>(i, Pri));
 	}
 
-	//Priority¸¦ TABLES_COUNT¸¸Å­ Á¤±ÔÈ­
+	//Priorityï¿½ï¿½ TABLES_COUNTï¿½ï¿½Å­ ï¿½ï¿½ï¿½ï¿½È­
 	for (auto& set : course_sets) {
 		sort_courses(set.second);
 		priority_normalization(set.second);
@@ -42,10 +42,10 @@ NameFilter::NameFilter(const vector<Course>& vec)
 	
 }
 
-vector<vector<Course>>& NameFilter::get_result()
+Vec<Vec<Course>>& NameFilter::get_result()
 {
 	auto& chosed = indexes_choosed;
-	//ÀÎµ¦½º Ãâ·Â¿ë
+	//ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â¿ï¿½
 	for (auto a : chosed) {
 		for (auto b : a){
 			cout << b << " ";
@@ -54,7 +54,7 @@ vector<vector<Course>>& NameFilter::get_result()
 	}
 	
 	
-	//Áßº¹¼º Á¦°Å
+	//ï¿½ßºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	for (int i = 0; i < chosed.size(); ++i) {
 		try {
 			auto iter = chosed.begin();
@@ -92,7 +92,7 @@ vector<vector<Course>>& NameFilter::get_result()
 
 // Insertion sort for priority(Insertion sort)
 void NameFilter::sort_courses(
-	vector<pair<int, int>>& set)
+	Vec<pair<int, int>>& set)
 {
 	auto j = 0;
 
@@ -108,7 +108,7 @@ void NameFilter::sort_courses(
 
 // Normalization priority is changed to count
 void NameFilter::priority_normalization(
-	vector<pair<int, int>>& set)
+	Vec<pair<int, int>>& set)
 {
 	int total = 0;
 	int check = 0;
@@ -124,7 +124,7 @@ void NameFilter::priority_normalization(
 		check += r.second;
 	}
 
-	//Á¤±ÔÈ­ °úÁ¤¿¡¼­ µü ¶³¾îÁö°Ô ºÐ¹è°¡ µÇÁö ¾Ê¾ÒÀ» °æ¿ì
+	//ï¿½ï¿½ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¹è°¡ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	while (check != TABLES_COUNT) {
 
 		if (check < TABLES_COUNT) {
@@ -139,10 +139,10 @@ void NameFilter::priority_normalization(
 	
 }
 
-//°ñ¶ó¾ßÇÏ´Â ÇÑ ½Ã°£Ç¥ ¿µ¿ª¿¡ ´ëÇÏ¿© 
-//°í¸£°Ô ½Ã°£Ç¥ case¸¦ °¡ÁßÄ¡¿¡ ¸Â°Ô ºÐ¹èÇØÁØ´Ù.
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ ï¿½Ã°ï¿½Ç¥ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ 
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½Ç¥ caseï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Â°ï¿½ ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½Ø´ï¿½.
 void NameFilter::distribute_course_index(
-	vector<pair<int, int>>& set)
+	Vec<pair<int, int>>& set)
 {
 	for (int i = 0; i < TABLES_COUNT; ++i)
 		indexes_choosed[i].emplace_back(VACANT);
@@ -166,7 +166,7 @@ void NameFilter::distribute_course_index(
 				--count;
 			}
 			else {
-				//ºó °ø°£À» Ã£À» ¶§ ±îÁö ÇÑ Ä­¾¿ ÀÌµ¿
+				//ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ä­ï¿½ï¿½ ï¿½Ìµï¿½
 				while (!(indexes_choosed[input_index].at
 								(start_index) == VACANT)) {
 					input_index += 1;

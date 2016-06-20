@@ -10,7 +10,7 @@ TimeFlag::TimeFlag() {
 
 }
 
-TimeFlag::TimeFlag(const vector<LecTime>& lectures) {
+TimeFlag::TimeFlag(const Vec<LecTime>& lectures) {
 
 	for (int i = 0; i < WEEK_MAX_SIZE; ++i)
 		flags[i] = false;
@@ -18,10 +18,10 @@ TimeFlag::TimeFlag(const vector<LecTime>& lectures) {
 	for (auto& l : lectures) {
 
 		int start_index = 
-			(l.start() / 5 - 1) + (l.day() * DAY_MAX_SIZE);
+			(l.start().clock / 5 - 1) + (l.day() * DAY_MAX_SIZE);
 
 		int end_index =
-			(l.end() / 5 - 1) + (l.day() * DAY_MAX_SIZE);
+			(l.end().clock / 5 - 1) + (l.day() * DAY_MAX_SIZE);
 
 		for (int i = start_index; i <= end_index; ++i)
 			flags[i] = 1;
