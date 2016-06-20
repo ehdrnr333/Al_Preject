@@ -45,7 +45,7 @@ const LecTime& Course::operator[](size_t i)  const
 
 std::ostream&
     project::operator << (std::ostream& _out,
-                          const Course& _crs)
+                          const project::Course& _crs)
     noexcept(false)
 {
     _out << "{ "

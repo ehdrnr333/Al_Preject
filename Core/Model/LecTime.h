@@ -15,7 +15,10 @@
 #ifndef LECTIME_H
 #define LECTIME_H
 #include "./Day.h"
-#include "../Stage.h"
+
+#include "../Stage/Time.hpp"
+#include "../Stage/Plan.hpp"
+#include "../Stage/Chain.hpp"
 
 namespace project
 {

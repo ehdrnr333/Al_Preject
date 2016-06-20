@@ -17,7 +17,6 @@
 #define COURSE_H
 
 #include "./LecTime.h"
-#include "../Stage.h"
 
 namespace project
 {
@@ -60,7 +59,7 @@ namespace project
     };
 
     std::ostream& operator << (std::ostream& _out,
-                               const Course& _crs)
+                               const project::Course& _crs)
         noexcept(false);
 
 
