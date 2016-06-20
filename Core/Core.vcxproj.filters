@@ -12,23 +12,32 @@
     <ClCompile Include="Model\LecTime.cpp">
       <Filter>Model</Filter>
     </ClCompile>
-    <ClCompile Include="Stage\stage_test.cpp">
-      <Filter>Stage</Filter>
-    </ClCompile>
     <ClCompile Include="Test\io_test.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\stage_test.cpp">
       <Filter>Test</Filter>
     </ClCompile>
     <ClCompile Include="Original\Subject.cpp">
       <Filter>Original</Filter>
     </ClCompile>
-    <ClCompile Include="Original\SubTable.cpp">
-      <Filter>Original</Filter>
+    <ClCompile Include="Filtering\TimeFilter.cpp">
+      <Filter>Filtering</Filter>
     </ClCompile>
-    <ClCompile Include="Original\TableResult.cpp">
-      <Filter>Original</Filter>
+    <ClCompile Include="Filtering\TimeFlag.cpp">
+      <Filter>Filtering</Filter>
     </ClCompile>
-    <ClCompile Include="DongGuk_Test.cpp">
-      <Filter>Original</Filter>
+    <ClCompile Include="Test\original_test.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Filtering\NameFilter.cpp">
+      <Filter>Filtering</Filter>
+    </ClCompile>
+    <ClCompile Include="Filtering\TimeFilter.cpp">
+      <Filter>Filtering</Filter>
+    </ClCompile>
+    <ClCompile Include="Filtering\TimeFlag.cpp">
+      <Filter>Filtering</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,33 +57,43 @@
     <ClInclude Include="Model\LecTime.h">
       <Filter>Model</Filter>
     </ClInclude>
-    <ClInclude Include="Stage\Chain.h">
-      <Filter>Stage</Filter>
-    </ClInclude>
     <ClInclude Include="Stage\Plan.hpp">
-      <Filter>Stage</Filter>
-    </ClInclude>
-    <ClInclude Include="Stage\Schedule.h">
       <Filter>Stage</Filter>
     </ClInclude>
     <ClInclude Include="Stage\Time.hpp">
       <Filter>Stage</Filter>
     </ClInclude>
-    <ClInclude Include="Original\Subject.h">
-      <Filter>Original</Filter>
-    </ClInclude>
-    <ClInclude Include="Original\SubTable.h">
-      <Filter>Original</Filter>
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="Stage\Chain.hpp">
+      <Filter>Stage</Filter>
     </ClInclude>
     <ClInclude Include="Original\TableResult.h">
       <Filter>Original</Filter>
     </ClInclude>
-    <ClInclude Include="DongGuk_Test.h">
+    <ClInclude Include="Original\Subject.h">
       <Filter>Original</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="README.md" />
+    <ClInclude Include="Filtering\TimeFilter.h">
+      <Filter>Filtering</Filter>
+    </ClInclude>
+    <ClInclude Include="Filtering\NameFilter.h">
+      <Filter>Filtering</Filter>
+    </ClInclude>
+    <ClInclude Include="Filtering\TimeFilter.h">
+      <Filter>Filtering</Filter>
+    </ClInclude>
+    <ClInclude Include="Filtering\TimeFlag.h">
+      <Filter>Filtering</Filter>
+    </ClInclude>
+    <ClInclude Include="Original.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Filtering.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Model">
@@ -83,11 +102,22 @@
     <Filter Include="Stage">
       <UniqueIdentifier>{1b1a7568-5d36-4aab-9019-3316da3d15d5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Original">
-      <UniqueIdentifier>{c9761113-ba22-43d5-8a1f-2e4f9919971e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Test">
       <UniqueIdentifier>{b3f5ecc8-42a7-4157-b4c0-9ce54b29da93}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Original">
+      <UniqueIdentifier>{85cf54a0-650c-4c44-8cce-7c70911f0312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Filtering">
+      <UniqueIdentifier>{92891d5d-87d8-4fdf-9eaa-5aba429eae78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms">
+      <UniqueIdentifier>{ed538568-b459-4caf-8ba9-43d799475a7d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <Filter>Algorithms</Filter>
+    </None>
   </ItemGroup>
 </Project>

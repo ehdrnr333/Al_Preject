@@ -2,7 +2,7 @@
 using namespace project;
 
 // constructor : Initialization TableResult based on the Course list
-TableResult::TableResult(CrsTable<Course> _ctb)
+TableResult::TableResult(Vec<Course> _ctb)
 {
 	for (auto crs : _ctb) {
 		calList.addCrs(crs);

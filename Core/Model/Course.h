@@ -1,7 +1,7 @@
 ﻿// ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 //
 //  File     : Course.h
-//  Updated  : 16/06/04
+//  Updated  : 16/06/17
 //  Author
 //      Park Dong-Ha ( luncliff@gmail.com )
 //  Note
@@ -17,7 +17,6 @@
 #define COURSE_H
 
 #include "./LecTime.h"
-#include "../Stage/Plan.hpp"
 
 namespace project
 {
@@ -34,7 +33,11 @@ namespace project
 	public:
 		using base_type = Plan<string, int32_t, LecTime>;
     public:
-        const int32_t    point;   // [ 1, 2 ... ]
+        using base_type = Plan<string, int32_t, LecTime>;
+        using code_type = base_type::id_type;
+        using id_type = base_type::job_type;
+
+        int32_t    point;   // [ 1, 2 ... ]
 
     public: 
         Course(string&& _code,
@@ -44,9 +47,9 @@ namespace project
         //      Add lecture time
         void addTime(LecTime _lec) noexcept(false);
 
-        const base_type::id_type& code() const noexcept;
+        const code_type& code() const noexcept;
 
-        const base_type::job_type& id() const noexcept;
+        const id_type& id() const noexcept;
 
         // - Note :
         //      Lecture count(== size)
@@ -58,7 +61,7 @@ namespace project
     };
 
     std::ostream& operator << (std::ostream& _out,
-                               const Course& _crs)
+                               const project::Course& _crs)
         noexcept(false);
 
 

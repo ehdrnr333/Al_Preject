@@ -111,32 +111,37 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Base.cpp" />
-    <ClCompile Include="DongGuk_Test.cpp" />
+    <ClCompile Include="Filtering\NameFilter.cpp" />
+    <ClCompile Include="Filtering\TimeFilter.cpp" />
+    <ClCompile Include="Filtering\TimeFlag.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model\Course.cpp" />
     <ClCompile Include="Model\Day.cpp" />
     <ClCompile Include="Model\LecTime.cpp" />
     <ClCompile Include="Original\Subject.cpp" />
-    <ClCompile Include="Original\SubTable.cpp" />
-    <ClCompile Include="Original\TableResult.cpp" />
-    <ClCompile Include="Stage\stage_test.cpp" />
+    <ClCompile Include="Test\original_test.cpp" />
     <ClCompile Include="Test\io_test.cpp" />
+    <ClCompile Include="Test\stage_test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
-    <ClInclude Include="DongGuk_Test.h" />
+    <ClInclude Include="Filtering.h" />
+    <ClInclude Include="Filtering\NameFilter.h" />
+    <ClInclude Include="Filtering\TimeFilter.h" />
+    <ClInclude Include="Filtering\TimeFlag.h" />
+    <ClInclude Include="Model.h" />
     <ClInclude Include="Model\Course.h" />
     <ClInclude Include="Model\CrsTable.hpp" />
     <ClInclude Include="Model\Day.h" />
     <ClInclude Include="Model\Interpreter.hpp" />
     <ClInclude Include="Model\LecTime.h" />
-    <ClInclude Include="Original\Subject.h" />
-    <ClInclude Include="Original\SubTable.h" />
-    <ClInclude Include="Original\TableResult.h" />
-    <ClInclude Include="Stage\Chain.h" />
-    <ClInclude Include="Stage\Schedule.h" />
+    <ClInclude Include="Original.h" />
+    <ClInclude Include="Stage.h" />
     <ClInclude Include="Stage\Time.hpp" />
     <ClInclude Include="Stage\Plan.hpp" />
+    <ClInclude Include="Stage\Chain.hpp" />
+    <ClInclude Include="Original\Subject.h" />
+    <ClInclude Include="Original\TableResult.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

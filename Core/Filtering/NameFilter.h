@@ -1,33 +1,95 @@
-#ifndef NAME_FILTER_H 
+ï»¿#ifndef NAME_FILTER_H 
 #define NAME_FILTER_H
 
 #include "../Base.h"
 #include "../Model/Course.h"
 
+/*
+	NameFilter
 
+	Author/SN		:	Doryeong Park/2010112406
+	
+	Description		:	Classify all courses with course name(key) and 
+						distribute courses to create several cases 
+						with different course names.
+
+
+	*	Member variables
+
+	original_table		:	Combinations of all courses as input
+
+	course_sets			:	Map with components with string(course name)
+							as key and index number of original table 
+							and its priority as value
+
+	indexes_choosed		:	Set of vectors of each cases containing 
+							index numbers of courses
+	
+	tables_filtered		:	Result(Set of all courses' combination)
+
+	start_index			:	Index to insert each courses index number
+							of same key
+
+
+	*	Constants
+
+	TABLES_COUNT	:	Limitation constant of all cases as output
+
+	VACANT			:	Constant value of index which of component 
+							doesn't determined
+
+	*	Member Functions
+	
+	sort_courses			:	Sorts set of courses priority with 
+								same name(key) with ascending order 
+
+	priority_normalization	:	Normalizes priorities with TABLES_COUNT
+								to distribute index number of courses 
+
+	distribute_course_index	:	Distributes index number of courses in 
+								indexes_choosed
+
+	
+	Constructor				:	Initializes all components and excutes 
+								3 procedures above
+
+	get_result				:	Creates result of all combination with 
+								no name duplication with indexes_choosed
+								Converts index number with matching courses
+
+*/
 namespace project
 {
 	class NameFilter {
 	private:
-		std::vector<Course> original_table; //¿øº» ½Ã°£Ç¥
-		std::vector<std::vector<Course>> tables_copied; //¿øº» ½Ã°£Ç¥¸¦ º¹»çÇÑ °ª
-		std::map<std::string, std::vector<std::pair<int, int>>> course_sets; //µ¿ÀÏÇÑ ÀÌ¸§ º°·Î ¹­Àº Á¤º¸µé(string : ¼ö¾÷ ÀÌ¸§, key : ºĞ¹è °³¼ö, value : ÇØ´ç ¼ö¾÷ ÀÎµ¦½º)
+<<<<<<< HEAD
+        //ì›ë³¸ ì‹œê°„í‘œ
+		Vec<Course> original_table; 
+        //ì›ë³¸ ì‹œê°„í‘œë¥¼ ë³µì‚¬í•œ ê°’
+		//Vec<Vec<Course>> tables_copied; 
+        //ë™ì¼í•œ ì´ë¦„ ë³„ë¡œ ë¬¶ì€ ì •ë³´ë“¤(string : ìˆ˜ì—… ì´ë¦„, key : ë¶„ë°° ê°œìˆ˜, value : í•´ë‹¹ ìˆ˜ì—… ì¸ë±ìŠ¤)
+		std::map<std::string, Vec<std::pair<int, int>>> course_sets; 
 
-		std::vector<std::vector<int>> indexes_choosed; //º¤ÅÍ ³»ÀÇ º¤ÅÍ : ¼±ÅÃµÈ ÀÎµ¦½º ¹øÈ£µé 
-		std::vector<std::vector<Course>> tables_filtered; //ÇÊÅÍ¸µ µÈ ½Ã°£Ç¥µé
+        //ë²¡í„° ë‚´ì˜ ë²¡í„° : ì„ íƒëœ ì¸ë±ìŠ¤ ë²ˆí˜¸ë“¤ 
+		Vec<Vec<int>> indexes_choosed; 
+        //í•„í„°ë§ ëœ ì‹œê°„í‘œë“¤
+		Vec<Vec<Course>> tables_filtered; 
 
 		int start_index = 0;
 
-		const int TABLES_COUNT = 130;
-		const int VACANT = -1;
+		const int TABLES_COUNT = 200;
+		const int VACANT = -1; 
+
+		Vec<int> prime_table;
 
 	public:
-		NameFilter(const std::vector<Course>& vec);
-		std::vector<std::vector<Course>>& get_result();
+		NameFilter(const Vec<Course>& vec);
+		Vec<Vec<Course>>& get_result();
 	private:
-		void sort_courses(std::vector<std::pair<int, int>>& set);
-		void priority_normalization(std::vector<std::pair<int, int>>& set);
-		void distribute_course_index(std::vector<std::pair<int, int>>& set);
+		void sort_courses(Vec<std::pair<int, int>>& set);
+		void priority_normalization(Vec<std::pair<int, int>>& set);
+		void distribute_course_index(Vec<std::pair<int, int>>& set);
+		bool isPrime(const int& num);
 	};
 
 }

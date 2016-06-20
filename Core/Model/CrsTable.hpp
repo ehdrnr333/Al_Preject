@@ -31,6 +31,10 @@ namespace project
     public:
         explicit CrsTable() = default;
 
+        explicit CrsTable(Deq<Course>&& que):
+            crs_list{std::move(que)}
+        {}
+
         void append(const Course& crs) noexcept(false)
         {
             crs_list.emplace_back(crs);
@@ -39,7 +43,7 @@ namespace project
         size_t total_point() const noexcept
         {
             size_t total{0};
-            for (const auto& crs : crs_list) {
+            for (auto& crs : crs_list) {
                 total += crs.point;
             }
             return total;
@@ -73,7 +77,7 @@ namespace project
     {
         out << "{ "
             << "\"total_point\" : \"" << _tbl.total_point() << "\", "
-            << "\"courses : \"[ \n";
+            << "\"courses\" : [ \n";
         for(const auto& crs : _tbl){
             out << crs << '\n';
         }

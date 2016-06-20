@@ -20,19 +20,11 @@ void Course::addTime(LecTime _lec) noexcept(false)
     this->times.emplace_back(std::move(_lec));
 }
 
-const Course::base_type::id_type& 
-	Course::code() const 
-	noexcept 
-{
+const Course::code_type& Course::code() const noexcept {
     return this->planid();
 }
 
-const Course::base_type::job_type& 
-	Course::id() const 
-	noexcept 
-{
-    return this->planjob();
-}
+const Course::id_type& Course::id() const noexcept {
 
 size_t Course::count() const noexcept
 {
@@ -51,13 +43,13 @@ const LecTime& Course::operator[](size_t i)  const
 
 std::ostream&
     project::operator << (std::ostream& _out,
-                          const Course& _crs)
+                          const project::Course& _crs)
     noexcept(false)
 {
     _out << "{ "
         << "\"code\" : \"" << _crs.code() << "\", "
         << "\"id\" : \"" << _crs.id() << "\", "
-        << "\"point\" : \"" << _crs.point
+        << "\"point\" : \"" << _crs.point << "\", "
         << "\"times \" : [";
     for(const auto& lec : _crs.times){
         _out << lec;

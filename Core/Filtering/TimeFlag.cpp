@@ -1,4 +1,4 @@
-#include "TimeFlag.h"	
+#include "./TimeFlag.h"	
 
 using namespace std;
 using namespace project;
@@ -10,18 +10,19 @@ TimeFlag::TimeFlag() {
 
 }
 
-TimeFlag::TimeFlag(const vector<LecTime>& lectures) {
+TimeFlag::TimeFlag(const Course& crs) {
 
 	for (int i = 0; i < WEEK_MAX_SIZE; ++i)
 		flags[i] = false;
 
-	for (auto& l : lectures) {
+	for (int i = 0; i < crs.count(); ++i) {
+		auto l = crs[i];
 
-		int start_index = 
-			(l.start() / 5 - 1) + (l.day() * DAY_MAX_SIZE);
+		int start_index =
+			(l.start().clock / 5 - 2) + ((l.day() - 1) * DAY_MAX_SIZE);
 
 		int end_index =
-			(l.end() / 5 - 1) + (l.day() * DAY_MAX_SIZE);
+			(l.end().clock / 5 - 2) + ((l.day() - 1) * DAY_MAX_SIZE);
 
 		for (int i = start_index; i <= end_index; ++i)
 			flags[i] = 1;
@@ -31,7 +32,7 @@ TimeFlag::TimeFlag(const vector<LecTime>& lectures) {
 
 bool TimeFlag::is_collide(const TimeFlag f) {
 
-	bool is_collide;
+	bool is_collide = false;
 
 	for (int i = 0; i < WEEK_MAX_SIZE; ++i) 
 		if ((flags[i] && f.get(i)) == 1) 
@@ -43,6 +44,7 @@ bool TimeFlag::is_collide(const TimeFlag f) {
 void TimeFlag::insert(TimeFlag f) 
 {
 	for (int i = 0; i < WEEK_MAX_SIZE; ++i) 
-		flags[i] = f.get(i);
+		if(flags[i] == false && f.get(i) == true)
+			flags[i] = f.get(i);
 }
 

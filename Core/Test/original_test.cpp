@@ -1,4 +1,4 @@
-#include "DongGuk_Test.h"
+#include "../Original.h"
 
 using namespace std;
 using namespace project;
@@ -12,7 +12,7 @@ using namespace project;
 //      Calcuate Course's time and Create TimeTable
 //      Write text file
 
-int dongguk_test(const std::string _ipath, const std::string _opath)
+int project::dongguk_test(const std::string _ipath, const std::string _opath)
 {
 	// Open the file
 	std::ifstream fin{ _ipath, std::ios_base::in };
@@ -22,6 +22,7 @@ int dongguk_test(const std::string _ipath, const std::string _opath)
 
 	Interpreter<Course> IL{ fin };
 	CrsTable<Course>    Table;
+    Vec<Course> EveryCourse;
 
 	// Until the stream is good, keep going
 	while (fin) {
@@ -39,7 +40,9 @@ int dongguk_test(const std::string _ipath, const std::string _opath)
 	std::cout << "# Instance Create Complete" << std::endl;
 
 	// Initiate TableResult Instance
-	TableResult tr(Table);
+
+    //TableResult tr(Table);
+	TableResult tr(EveryCourse);
 	std::cout << "# Operating Instance Create Complete" << std::endl;
 	// Calcuate Course's time and Create TimeTable
 	tr.CreateTableList();
