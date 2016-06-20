@@ -25,8 +25,6 @@ const Course::code_type& Course::code() const noexcept {
 }
 
 const Course::id_type& Course::id() const noexcept {
-    return this->planjob();
-}
 
 size_t Course::count() const noexcept
 {

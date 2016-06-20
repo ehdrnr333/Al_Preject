@@ -3,56 +3,48 @@
 using namespace std;
 using namespace project;
 
-std::string key(const Course& _crs) {
-	//std::ostringstream sout;
-	//sout << _crs.code() << "-" << _crs.id();
-	//return sout.str();
-	return _crs.code();
-}
-
-int priority(const Course& _crs) {
-	return _crs.point;
-}
-
-
 NameFilter::NameFilter(const Vec<Course>& vec)
 {
 	original_table = vec;
-
-	//TABLES_COUNT ��ŭ Copy
-	for (int i = 0; i < TABLES_COUNT; ++i)
-		tables_copied.emplace_back(vec);
 
 	indexes_choosed.resize(TABLES_COUNT);
 
 	//�ð�ǥ ���� ����(first : index, second : priority)
 	for (int i = 0; i < vec.size(); ++i) {
-		auto K = key(vec[i]);
-		auto Pri = priority(vec[i]);
-			course_sets[K].push_back(
-				pair<int, int>(i, Pri));
+		string K = vec[i].code();
+		auto Pri = static_cast<int>(vec[i].point);
+		course_sets[K].push_back(
+			pair<int, int>(i, Pri));
 	}
 
-	//Priority�� TABLES_COUNT��ŭ ����ȭ
+	int prime_candidate = 3;
+
+	while (prime_table.size() != course_sets.size()){
+		if (isPrime(prime_candidate))
+			prime_table.emplace_back(prime_candidate);
+		
+		prime_candidate++;
+	}
+
 	for (auto& set : course_sets) {
 		sort_courses(set.second);
-		priority_normalization(set.second);
-		distribute_course_index(set.second);
 	}
 	
+	for (auto& set : course_sets) {
+		if (set.second.size() >= TABLES_COUNT ||
+			set.second.at(0).second == 0)
+			continue;
+		priority_normalization(set.second);
+	}
+
+	for (auto& set : course_sets) {
+		distribute_course_index(set.second);
+	}
 }
 
 Vec<Vec<Course>>& NameFilter::get_result()
-{
+{	
 	auto& chosed = indexes_choosed;
-	//�ε��� ���¿�
-	for (auto a : chosed) {
-		for (auto b : a){
-			cout << b << " ";
-		}
-		cout << endl;
-	}
-	
 	
 	//�ߺ��� ����
 	for (int i = 0; i < chosed.size(); ++i) {
@@ -81,6 +73,8 @@ Vec<Vec<Course>>& NameFilter::get_result()
 	for (int i = 0; i < indexes_choosed.size(); ++i) {
 
 		for (auto a : indexes_choosed[i]) {
+			if (a < 0)
+				continue;
 			auto&& current_crs = original_table[a];
 			tables_filtered[i].emplace_back(current_crs);
 		}
@@ -144,18 +138,18 @@ void NameFilter::priority_normalization(
 void NameFilter::distribute_course_index(
 	Vec<pair<int, int>>& set)
 {
+	
 	for (int i = 0; i < TABLES_COUNT; ++i)
 		indexes_choosed[i].emplace_back(VACANT);
 
 	for (auto p : set) {
 
-		auto count = p.second;
-		auto interval = TABLES_COUNT / 
-						count + pow(count, start_index);
-		auto input_index = start_index;
+		auto count = abs(p.second);
+		auto interval = prime_table[start_index];
+		auto input_index = 0;
 
 		while(count != 0){
-
+			
 			input_index += interval;
 			input_index %= TABLES_COUNT;
 
@@ -166,11 +160,14 @@ void NameFilter::distribute_course_index(
 				--count;
 			}
 			else {
-				//�� ������ ã�� �� ���� �� ĭ�� �̵�
-				while (!(indexes_choosed[input_index].at
-								(start_index) == VACANT)) {
+
+				//�� ������ ã�� �� ���� �� ĭ�� �̵� 
+				while (!(indexes_choosed[input_index].at(start_index) 
+					== VACANT)) {
+
 					input_index += 1;
 					input_index %= TABLES_COUNT;
+
 				}
 
 				indexes_choosed[input_index].at
@@ -182,4 +179,17 @@ void NameFilter::distribute_course_index(
 	}
 
 	++start_index;
+}
+
+bool NameFilter::isPrime(const int& num) {
+	
+	if (num == 0)
+		return true;
+
+	for (int i = 2; i <= sqrt(num); i++)
+		if (num % i == 0)
+			return false;
+	
+	return true;
+
 }

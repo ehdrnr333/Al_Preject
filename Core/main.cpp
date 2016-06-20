@@ -1,4 +1,4 @@
-﻿#include <chrono>
+#include <chrono>
 #include "./Stage.h"
 #include "./Original.h"
 #include "./Filtering.h"
@@ -10,6 +10,30 @@ using namespace project;
 
 std::chrono::steady_clock::time_point tm_stamp() {
     return std::chrono::steady_clock::now();
+}
+
+
+// - Note :
+//      박도령 알고리즘 테스트
+int filtering_algorithm_test(const std::string _ipath,
+	const std::string _opath){
+    	for_each(Table.begin(), Table.end(), [&](Course c) {
+		d.emplace_back(c);
+	});
+
+	cout << "NameFilter process completed" << endl;
+
+	TimeFilter t{ n_filter_result };
+
+	auto& t_filter_result = t.get_result();
+
+	cout << "TimeFilter process completed" << endl;
+	
+	for (const auto& v : t_filter_result) {
+		for (const auto& crs : v) {
+			Table.append(crs);
+		}
+	}
 }
 
 
@@ -53,10 +77,6 @@ int main(int argc, char* argv[])
                   << EveryCourse.size() << std::endl;
 
 
-
-
-
-
         // ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
         // Original Algorithm
         // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
@@ -90,7 +110,6 @@ int main(int argc, char* argv[])
 
 
 
-
         // ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
         // Filtering Algorithm
         // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
@@ -107,11 +126,7 @@ int main(int argc, char* argv[])
                                 tm_stamp() - fil_start);
         std::cout << fil_time.count() << "ms" << std::endl;
 
-
         // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-
-
-
 
 
 
@@ -152,8 +167,6 @@ int main(int argc, char* argv[])
         //std::cout << "Staging Done : "
         //    << DoneQue.size() << " Table... " << std::endl;
         // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-
-
 
 
     }

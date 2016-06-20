@@ -17,7 +17,7 @@ namespace project
 		const int WEEK_MAX_SIZE = DAY_MAX_SIZE * 5;
 	public:
 		TimeFlag();
-		TimeFlag(const Vec<LecTime>& lectures);
+		TimeFlag(const Course& crs);
 		bool is_collide(const TimeFlag f);
 		void insert(TimeFlag f);
 		

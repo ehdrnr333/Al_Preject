@@ -119,8 +119,6 @@
     <ClCompile Include="Model\Day.cpp" />
     <ClCompile Include="Model\LecTime.cpp" />
     <ClCompile Include="Original\Subject.cpp" />
-    <ClCompile Include="Original\SubTable.cpp" />
-    <ClCompile Include="Original\TableResult.cpp" />
     <ClCompile Include="Test\original_test.cpp" />
     <ClCompile Include="Test\io_test.cpp" />
     <ClCompile Include="Test\stage_test.cpp" />
@@ -143,7 +141,6 @@
     <ClInclude Include="Stage\Plan.hpp" />
     <ClInclude Include="Stage\Chain.hpp" />
     <ClInclude Include="Original\Subject.h" />
-    <ClInclude Include="Original\SubTable.h" />
     <ClInclude Include="Original\TableResult.h" />
   </ItemGroup>
   <ItemGroup>

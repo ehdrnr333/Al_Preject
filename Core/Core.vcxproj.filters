@@ -21,11 +21,11 @@
     <ClCompile Include="Original\Subject.cpp">
       <Filter>Original</Filter>
     </ClCompile>
-    <ClCompile Include="Original\SubTable.cpp">
-      <Filter>Original</Filter>
+    <ClCompile Include="Filtering\TimeFilter.cpp">
+      <Filter>Filtering</Filter>
     </ClCompile>
-    <ClCompile Include="Original\TableResult.cpp">
-      <Filter>Original</Filter>
+    <ClCompile Include="Filtering\TimeFlag.cpp">
+      <Filter>Filtering</Filter>
     </ClCompile>
     <ClCompile Include="Test\original_test.cpp">
       <Filter>Test</Filter>
@@ -73,8 +73,8 @@
     <ClInclude Include="Original\Subject.h">
       <Filter>Original</Filter>
     </ClInclude>
-    <ClInclude Include="Original\SubTable.h">
-      <Filter>Original</Filter>
+    <ClInclude Include="Filtering\TimeFilter.h">
+      <Filter>Filtering</Filter>
     </ClInclude>
     <ClInclude Include="Filtering\NameFilter.h">
       <Filter>Filtering</Filter>
@@ -96,9 +96,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="Model">
       <UniqueIdentifier>{e28419f6-a83a-43d0-a809-44fb6f340ff5}</UniqueIdentifier>
     </Filter>
@@ -117,5 +114,10 @@
     <Filter Include="Algorithms">
       <UniqueIdentifier>{ed538568-b459-4caf-8ba9-43d799475a7d}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <Filter>Algorithms</Filter>
+    </None>
   </ItemGroup>
 </Project>
